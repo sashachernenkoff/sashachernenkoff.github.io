@@ -51,7 +51,7 @@ a {
 }
 
 .current-title {
-    font-size: medium;
+    font-size: small;
     text-align: center;
     width: fit-content;
     margin: 7px auto;
