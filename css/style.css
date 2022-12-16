@@ -100,7 +100,8 @@ a {
     text-align: center;
     margin-bottom: 9px;
   }
-  @media  (max-width:1000px) {
+
+@media  (max-width:1000px) {
     #meInTheWorld {
         position: absolute;
         bottom: -94px !important;
@@ -132,6 +133,15 @@ a {
       .current-title {
         padding: 2px 4px;
       }
+}
+
+@font-face {
+    font-family: 'gt_walsheim_proregular';
+    src: url('https://sashachernenkoff.com/css/fonts/gtwalsheimpro-regular/gtwalsheimpro-regular-webfont.woff2') format('woff2'),
+         url('https://sashachernenkoff.com/css/fonts/gtwalsheimpro-regular/gtwalsheimpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 .block-relative-fitcontet {
