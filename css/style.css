@@ -136,6 +136,7 @@ a {
     }
     .hello-myname .name {
         display: block!;
+        font-size: 18px !important;
     }
     .hello-myname .hi-this-is {
         font-size: 12px !important;
