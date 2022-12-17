@@ -45,6 +45,7 @@ a {
     -moz-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
     box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
     width: 90%;
+    align-content: center;
     background-image: url('../images/lined-paper.png');
     background-size: cover;
     background-color: white;
@@ -57,7 +58,6 @@ a {
 
 .biopic {
     border-radius: 50%;
-    text-align: center;
 }
 
 .biopic-image {
@@ -67,12 +67,11 @@ a {
 .hello-myname {
     font-size: x-large;
     color: white;
-    text-align: center;
+    width: fit-content;
+    margin: 7px auto;
     box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 50%);
     background: #44423f!important;
     padding: 2px 23px;
-    width: fit-content;
-    margin: auto;
 }
 
 .current-title {
@@ -136,17 +135,12 @@ a {
         padding: 2px 4px !important;
     }
     .hello-myname .name {
-        /*display: block!;*/
+        display: block!;
     }
-    .hello-myname .hi {
-        font-size: 22px !important;
-    }
-    .hello-myname .this-is {
-        font-size: 16px !important;
-        margin-right: -10px !important;
+    .hello-myname .hi-this-is {
+        font-size: 12px !important;
     }
     header {
-        text-align: left !important;
         margin-bottom: 10px;
     }
     .container-box {

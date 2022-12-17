@@ -10,16 +10,13 @@ var windowSize = {
 var randomWidth = () => {
     let x = 0;
     if (detectMob()) {
-        x = getRndInteger(75,90);
-        document.querySelector(".container-box").style.width = "80%";
-        document.querySelector(".container-box").setAttribute("data-value",  " ");
-        document.querySelector(".btn-stop").style.opacity = "0";
+        x = getRndInteger(60,85);
+        document.querySelector(".container-box").style.width = x + "%";
+        document.querySelector(".container-box").setAttribute("data-value", x+ "%");
 
-        x = getRndInteger(5, AGE);
-        document.querySelector(".container-box").style.paddingBottom = x/2+"%";
-        document.querySelector(".container-box").setAttribute("data-value",  x+"%");
-        // clearInterval(interval);
-        NABIZ = 1000;
+        // x = getRndInteger(5, AGE);
+        // document.querySelector(".container-box").style.paddingBottom = x/2+"%";
+        // document.querySelector(".container-box").setAttribute("data-value",  x+"%");
     }
     else {
         x = getRndInteger(30, 70);
