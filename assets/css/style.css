@@ -226,8 +226,13 @@ a {
         margin-bottom: 10px;
     }
 
+    .container-box-home {
+        margin: 32% auto !important;
+    }
+
     .container-box {
         margin: 32% auto !important;
+        width: 50%;
     }
 
     .current-title {
