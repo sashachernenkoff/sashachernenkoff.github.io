@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'GT Walsheim Pro';
-    src: url('../fonts/gtwalsheimpro-regular.eot');
-    src: url('../fonts/gtwalsheimpro-regular.woff2') format('woff2'),
-        url('../fonts/gtwalsheimpro-regular.woff') format('woff'),
-        url('../fonts/gtwalsheimpro-regular.ttf') format('truetype'),
-        url('../fonts/gtwalsheimpro-regular.eot') format('embedded-opentype');
+    src: url('..font/gtwalsheimpro-regular.eot');
+    src: url('../font/gtwalsheimpro-regular.woff2') format('woff2'),
+        url('../font/gtwalsheimpro-regular.woff') format('woff'),
+        url('../font/gtwalsheimpro-regular.ttf') format('truetype'),
+        url('../font/gtwalsheimpro-regular.eot') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,7 +46,7 @@ a {
     box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
     width: 90%;
     align-content: center;
-    background-image: url('../images/lined-paper.png');
+    background-image: url('../img/lined-paper.png');
     background-size: cover;
     background-color: white;
     transition: all 1s;
