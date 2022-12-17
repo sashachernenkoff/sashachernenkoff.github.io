@@ -11,17 +11,17 @@ var randomWidth = () => {
     let x = 0;
     if (detectMob()) {
         x = getRndInteger(60,85);
-        document.querySelector(".container-box").style.width = x + "%";
-        document.querySelector(".container-box").setAttribute("data-value", x+ "%");
+        document.querySelector(".container-box-home").style.width = x + "%";
+        document.querySelector(".container-box-home").setAttribute("data-value", x+ "%");
 
         // x = getRndInteger(5, AGE);
-        // document.querySelector(".container-box").style.paddingBottom = x/2+"%";
-        // document.querySelector(".container-box").setAttribute("data-value",  x+"%");
+        // document.querySelector(".container-box-home").style.paddingBottom = x/2+"%";
+        // document.querySelector(".container-box-home").setAttribute("data-value",  x+"%");
     }
     else {
         x = getRndInteger(30, 70);
-        document.querySelector(".container-box").style.width = x + "%";
-        document.querySelector(".container-box").setAttribute("data-value", x+ "%");
+        document.querySelector(".container-box-home").style.width = x + "%";
+        document.querySelector(".container-box-home").setAttribute("data-value", x+ "%");
     }
 };
 
