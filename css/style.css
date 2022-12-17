@@ -55,6 +55,14 @@ a {
     position: relative;
 }
 
+.biopic {
+    border-radius: 50%;
+}
+
+.biopic-image {
+    border-radius: 50%;
+}
+
 .hello-myname {
     font-size: x-large;
     color: white; 
