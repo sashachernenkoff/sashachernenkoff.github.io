@@ -132,14 +132,19 @@ a {
 }
 
 .topnav {
-    background-color: #f9f2ec;
     overflow: hidden;
+    z-index: 1000;
+    font-size: small;
+    text-align: center;
+    background-color: #f9f2ec;
+    position: fixed;
+    top: 0;
+    width: 100%;   
+    text-align: center;
+    margin-bottom: 9px;
 }
 
 .topnav-container {
-    background-color: #f9f2ec;
-    font-size: small;
-    overflow: hidden;
     position: relative;
 }
 
