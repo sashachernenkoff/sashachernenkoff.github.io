@@ -62,16 +62,17 @@ a {
 
 .biopic-image {
     border-radius: 50%;
+    box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
 }
 
 .hello-myname {
-    font-size: x-large;
+    font-size: large;
     color: white;
     width: fit-content;
     margin: 7px auto;
-    box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 50%);
+    box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
     background: #44423f!important;
-    padding: 2px 23px;
+    padding: 5px 23px;
 }
 
 .current-title {
@@ -80,7 +81,7 @@ a {
     text-align: center;
     width: fit-content;
     margin: 7px auto;
-    box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 50%);
+    box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
     background: #44423f!important;
     padding: 2px 23px;
 }
@@ -115,6 +116,68 @@ a {
     font-weight: bolder;
 }
 
+.topnav {
+    background-color: #f9f2ec;
+    overflow: hidden;
+}
+
+.topnav-container {
+    background-color: #f9f2ec;
+    font-size: small;
+    overflow: hidden;
+    position: relative;
+}
+
+.topnav-home {
+    float: left;
+    display: block;
+    text-align: center;
+    margin: 30px 30px;
+}
+
+.topnav-about {
+    display: block;
+    text-align: center;
+    margin: 30px 30px;
+    position: absolute;
+    right: 10%;
+}
+
+.topnav-projects {
+    float: right;
+    display: block;
+    text-align: center;
+    margin: 30px 30px;
+}
+
+.topnav a {
+    color: #44423f;
+    text-align: center;
+    width: fit-content;
+    margin: 7px 14px;
+    padding: 2px 14px;
+}
+  
+.topnav a:hover {
+    background: #44423f!important;
+    color: white;
+    box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
+    -webkit-transition: padding 0.2s ease-in;
+    -moz-transition: padding 0.2s ease-in;
+    -o-transition: padding 0.2s ease-in;
+    transition: padding 0.2s ease-in;
+    margin: 7px 8px;
+    padding: 3px 23px;
+}
+  
+.topnav a.active {
+    background: #44423f!important;
+    color: white;
+    box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
+    margin: 7px 8px;
+    padding: 3px 23px;
+}
+
 .footer {
     z-index: 1000;
     font-size: small;
@@ -134,21 +197,48 @@ a {
         background: white;
         padding: 2px 4px !important;
     }
+
     .hello-myname .name {
         display: block!;
         font-size: 22px !important;
     }
+
     .hello-myname .hi-this-is {
         font-size: 12px !important;
     }
-    header {
+
+    .header {
         margin-bottom: 10px;
     }
+
     .container-box {
         margin: 32% auto !important;
     }
+
     .current-title {
         padding: 2px 4px;
+    }
+
+    .topnav-home {
+        margin: 10px 10px;
+    }
+
+    .topnav a {
+        padding: 2px 4px;
+    }
+
+    .topnav a:hover {
+        padding: 2px 9px;
+    }
+
+    .topnav-about {
+        margin: 10px 10px;
+        position: absolute;
+        right: 18%;
+    }
+
+    .topnav-projects {
+        margin: 10px 10px;
     }
 }
 
