@@ -57,6 +57,7 @@ a {
 
 .biopic {
     border-radius: 50%;
+    text-align: center;
 }
 
 .biopic-image {
@@ -65,9 +66,10 @@ a {
 
 .hello-myname {
     font-size: x-large;
-    color: white; 
+    color: white;
+    text-align: center;
     box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 50%);
-    background: #44423f;
+    background: #44423f!important;
     padding: 2px 23px;
     width: fit-content;
     margin: auto;
@@ -80,7 +82,7 @@ a {
     width: fit-content;
     margin: 7px auto;
     box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 50%);
-    background: #44423f;
+    background: #44423f!important;
     padding: 2px 23px;
 }
 

@@ -10,7 +10,7 @@ var windowSize = {
 var randomWidth = () => {
     let x = 0;
     if (detectMob()) {
-        // x = getRndInteger(65,85);
+        x = getRndInteger(75,90);
         document.querySelector(".container-box").style.width = "80%";
         document.querySelector(".container-box").setAttribute("data-value",  " ");
         document.querySelector(".btn-stop").style.opacity = "0";
