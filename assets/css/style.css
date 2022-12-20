@@ -227,6 +227,18 @@ a {
     font-weight: bolder;
 }
 
+.footer-home {
+    font-size: small;
+    text-align: center; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;   
+    text-align: center;
+    padding-bottom: 9px;
+    z-index: 9999;
+    background-color: #f9f2ec;
+}
+
 .footer {
     font-size: small;
     text-align: center; 
