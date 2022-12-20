@@ -262,7 +262,7 @@ a {
     }
 
     .container-box {
-        margin: 20% auto !important;
+        margin: 32% auto !important;
         width: 80%;
         flex-wrap: wrap;
         justify-content: center;
