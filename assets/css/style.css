@@ -199,7 +199,7 @@ a {
 
 .container-box-image {
     padding: 30px 50px;
-    flex: 0 1 auto;
+    flex: 0 1 40%;
 }
 
 .about-image {
