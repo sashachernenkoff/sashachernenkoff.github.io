@@ -128,23 +128,8 @@ a {
     position: relative;
 }
 
-.container-box {
-    -webkit-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
-    -moz-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
-    box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
-    width: 25%;
-    align-content: center;
-    background-size: cover;
-    background-color: white;
-    transition: all 1s;
-    margin: 14% auto;
-    padding: 30px;  
-    text-align: center;
-    position: relative;
-}
-
 .biopic {
-    border-radius: 50%;
+    /* padding: 30px; */
 }
 
 .biopic-image {
@@ -185,6 +170,43 @@ a {
 #social-icons .iconi {
     font-size: medium;
     color: #44423f!important;
+}
+
+.container-box {
+    -webkit-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
+    -moz-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
+    box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
+    width: 65%;
+    align-content: center;
+    background-size: cover;
+    background-color: white;
+    transition: all 1s;
+    margin: 10% auto;
+    padding: 30px;  
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-box-text {
+    padding: 30px 50px;
+    flex: 1 1 500px;
+    text-align: justify;
+}
+
+.container-box-image {
+    padding: 30px 50px;
+    flex: 0 1 auto;
+}
+
+.about-image {
+    border-radius: 50%;
+    box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
+    width: 100%;
+    max-width: 250px;
+    height: auto;
 }
 
 .italic-larger-txt {
@@ -237,8 +259,17 @@ a {
     }
 
     .container-box {
-        margin: 32% auto !important;
-        width: 50%;
+        margin: 20% auto !important;
+        width: 80%;
+        font-size: small;
+    }
+
+    .container-box-text {
+        padding: 10px 15px;
+    }
+    
+    .container-box-image {
+        padding: 10px 15px;
     }
 
     .current-title {
