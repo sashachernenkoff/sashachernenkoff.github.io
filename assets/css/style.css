@@ -199,7 +199,7 @@ a {
 
 .container-box-image {
     padding: 30px 50px;
-    flex: 0 1 40%;
+    flex: 0 1 45%;
 }
 
 .about-image {
@@ -230,8 +230,6 @@ a {
 .footer {
     font-size: small;
     text-align: center; 
-    position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;   
     text-align: center;
