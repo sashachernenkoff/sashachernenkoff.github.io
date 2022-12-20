@@ -39,7 +39,7 @@ var interval = setInterval(() => {
 
 
 function detectMob() {
-    return window.innerWidth <= 1000 && window.innerHeight <= 1000;
+    return window.innerWidth <= 900 && window.innerHeight <= 900;
 }
 
 

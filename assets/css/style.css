@@ -38,6 +38,7 @@ header ul {
     color: #44423f;
     z-index: 9999;
     overflow: hidden;
+    background-color: #f9f2ec;
 }
 
 .home {
@@ -186,8 +187,8 @@ a {
     text-align: center;
     position: relative;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    font-size: small;
 }
 
 .container-box-text {
@@ -234,11 +235,12 @@ a {
     bottom: 0;
     width: 100%;   
     text-align: center;
-    margin-bottom: 9px;
+    padding-bottom: 9px;
     z-index: 9999;
+    background-color: #f9f2ec;
 }
 
-@media  (max-width:1000px) {
+@media  (max-width:900px) {
     .hello-myname {
         font-size: x-large;
         box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 50%);
@@ -262,7 +264,8 @@ a {
     .container-box {
         margin: 20% auto !important;
         width: 80%;
-        font-size: small;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .container-box-text {
