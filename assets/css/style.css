@@ -32,7 +32,7 @@ header ul {
     align-items: center;
     position: fixed;
     top: 0;
-    height: 60px;
+    height: 80px;
     width: 100%;
     font-size: small;
     color: #44423f;
@@ -63,7 +63,7 @@ header ul {
     padding: 2px 14px;
 }
   
-.home a:hover, .nav-links a:hover {
+.nav-links a:hover {
     background: #44423f!important;
     color: white;
     box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
@@ -73,11 +73,23 @@ header ul {
     transition: padding 0.2s ease-in;
     padding: 3px 19px;
 }
+
+.home a:hover {
+    -webkit-transition: padding 0.2s ease-in;
+    -moz-transition: padding 0.2s ease-in;
+    -o-transition: padding 0.2s ease-in;
+    transition: padding 0.2s ease-in;
+    padding: 3px 19px;
+}
   
-.home a:active, .nav-links a:active {
+.nav-links a:active {
     background: #44423f!important;
     color: white;
     box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
+    padding: 3px 19px;
+}
+
+.nav-links a:active {
     padding: 3px 19px;
 }
 
