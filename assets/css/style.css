@@ -415,6 +415,7 @@
    justify-items: center;
    transition: 0.3s;
    text-align: center;
+   opacity: 1;
  }
  .close:hover,
  .close:focus {
