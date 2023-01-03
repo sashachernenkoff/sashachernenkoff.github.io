@@ -41,6 +41,15 @@
 
 <body>
 
+    <!-- modal image popup -->
+    <div id="myModal" class="modal">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img class="modal-content" id="modalImage" src="../assets/img/marinade_keycap sets.png" alt="marinade">
+
+    </div>
+
     <header>
 
         <nav class="navbar">
@@ -84,14 +93,68 @@
 
             <div class="slide two">
 
-                <div class="container-box one">
+                <div class="container-box-lb two">
 
-                    <div class="container-box-image">
-                        <img src="../assets/img/s-logo.png">
+                    <div class="container-box-lb-image">
+
+                        <div class="lb-image-container">
+                            <img class="lb-image" id="imageBox" src="../assets/img/marinade_keycap sets.png" alt="marinade" onclick="openModal(this)">
+                        </div>
+
+                        <div class="lb-thumbnail-wrapper">
+                            <img class="lb-thumbnail" src="../assets/img/marinade_keycap sets.png" alt="marinade" style="border: 0.5px solid #333;" onclick="setMain(this)">
+                            <img class="lb-thumbnail" src="../assets/img/marinade_dark_rama u80a3.png" alt="marinade" onclick="setMain(this)">
+                            <img class="lb-thumbnail" src="../assets/img/marinade_rama u80a.png" alt="marinade" onclick="setMain(this)">
+                            <img class="lb-thumbnail" src="../assets/img/marinade_dark_rama u80a2.png" alt="marinade" onclick="setMain(this)">
+                        </div>
+
+                        <script>
+                            function setMain(thumbnailImage) {
+
+                                // change the main image to the thumbnail that was clicked
+                                var mainImage = document.getElementById("imageBox");
+                                mainImage.src = thumbnailImage.src;
+
+                                var childImages = document.getElementsByClassName("lb-thumbnail");
+                                var i;
+
+                                // clear all other borders
+                                for ( i = 0; i < childImages.length; i++ ) {
+                                    childImages[i].style.border = "";
+                                }
+
+                                // add border to the thumbnail that was clicked
+                                thumbnailImage.style.border = "0.5px solid #333";
+                            }
+
+                            function openModal(img) {
+
+                                // change the modal image to the thumbnail that was clicked
+                                var modalImage = document.getElementById("modalImage");
+                                modalImage.src = img.src;
+
+                                // make modal visible
+                                var modal = document.getElementById("myModal");
+                                modal.style.display = "block";
+                            }
+
+                            function closeModal() {
+
+                                var modal = document.getElementById("myModal");
+                                modal.style.display = "none";
+                            }
+                        </script>
+
                     </div>
 
                     <div class="container-box-text">
-                        <span class="background-text">keycap set design</span>
+                        <span class="background-text">marinade themed keycap sets
+                            <br><br>
+                            inspired by the rich, warm color palette of marinated spanish olives, these keycap sets 
+                            are a fresh and distinctive take on traditionally masculine and clunky keycap designs. all 
+                            lowercase legends and monochromatic color palettes deliver visual simplicity, for a modern 
+                            minimalist take.
+                        </span>
                     </div>
 
                 </div>
@@ -100,7 +163,7 @@
 
             <div class="slide three">
 
-                <div class="container-box one">
+                <div class="container-box three">
 
                     <div class="container-box-image">
                         <img src="../assets/img/s-logo.png">
@@ -116,7 +179,7 @@
 
             <div class="slide four">
 
-                <div class="container-box one">
+                <div class="container-box four">
 
                     <div class="container-box-image">
                         <img src="../assets/img/s-logo.png">
