@@ -381,7 +381,7 @@
  .modal {
    display: none; /* hidden by default */
    position: fixed;
-   z-index: 9999;
+   z-index: 9959;
    left: 0;
    top: 0;
    width: 100vw;
@@ -405,6 +405,7 @@
    to {transform:scale(1)}
  }
  .close {
+   z-index: 9999;
    position: absolute;
    top: 15px;
    right: 75px;
@@ -428,7 +429,8 @@
  }
  .close-text {
    width: 100%;
-   font-size: small;
+   font-size: small!important;
+   font-weight: normal!important;
  }
 
 
