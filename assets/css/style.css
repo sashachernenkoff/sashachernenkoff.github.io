@@ -354,6 +354,7 @@
    height: 400px;
    margin: 20px 0;
    cursor: pointer;
+   image-rendering: -webkit-optimize-contrast;
  }
  .lb-thumbnail-wrapper {
    width: 100%;
@@ -371,6 +372,7 @@
    margin: 0 7px;
    cursor: pointer;
    opacity: 1;
+   image-rendering: -webkit-optimize-contrast;
  }
  .lb-thumbnail:hover {
    opacity: 0.8;
