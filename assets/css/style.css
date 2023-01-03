@@ -312,7 +312,7 @@
 
 
 
- /* image gallery */
+ /* image gallery and modal */
 
  .container-box-lb {
    -webkit-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
@@ -349,6 +349,7 @@
    width: 100%;
    justify-self: left;
    object-fit: cover;
+   object-position: center center;
    max-width: 500px;
    height: 400px;
    margin: 20px 0;
@@ -364,6 +365,7 @@
  .lb-thumbnail {
    box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
    object-fit: cover;
+   object-position: center center;
    max-width: 100px;
    height: 80px;
    margin: 0 7px;
@@ -407,9 +409,11 @@
    top: 15px;
    right: 75px;
    color: #44423f;
-   font-size: 40px;
-   font-weight: bold;
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
    transition: 0.3s;
+   text-align: center;
  }
  .close:hover,
  .close:focus {
@@ -417,6 +421,17 @@
    text-decoration: none;
    cursor: pointer;
  }
+ .close-x {
+   width: 100%;
+   font-size: 40px;
+   font-weight: bold;
+ }
+ .close-text {
+   width: 100%;
+   font-size: small;
+ }
+
+
 
 
 /* footer */

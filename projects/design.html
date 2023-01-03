@@ -42,9 +42,14 @@
 <body>
 
     <!-- modal image popup -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" onclick="closeModal()">
 
-        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="close">
+
+            <span class="close-x">&times;</span>
+            <span class="close-text">close</span>
+
+        </div>
 
         <img class="modal-content" id="modalImage" src="../assets/img/marinade_keycap sets.png" alt="marinade">
 
