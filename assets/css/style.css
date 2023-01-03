@@ -323,23 +323,21 @@
    background-color: white;
    justify-self: center;
    display: flex;
-   align-content: center;
    align-items: center;
+   width: 70%;
    position: relative;
    max-height: 70vh;
-   max-width: 80%;
    padding: 30px;
    text-align: center;
    font-size: small;
  }
  .container-box-lb-image {
-   width: 100%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    padding: 5px 10px;
-   flex: 0 1 65%;
+   flex: 0 1 auto;
  }
  .lb-image-container {
    margin: 0;
@@ -347,7 +345,6 @@
  .lb-image {
    box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
    width: 100%;
-   justify-self: left;
    object-fit: cover;
    object-position: center center;
    max-width: 500px;
@@ -377,8 +374,10 @@
  .lb-thumbnail:hover {
    opacity: 0.8;
  }
- .lb-thumbnail-active {
-   opacity: 0.2;
+ .container-box-lb-text {
+   padding: 30px 50px;
+   flex: 1 0 300px;
+   text-align: left;
  }
  .modal {
    display: none; /* hidden by default */
@@ -461,6 +460,12 @@
 
  @media  (max-width:900px) {
 
+   /* general */
+   body {
+      height: auto;
+      overflow: scroll;
+    }
+
     /* nav bar */
 
     .home li, .nav-links li {
@@ -534,6 +539,20 @@
       max-height: 100px;
       width: auto;
      }
+     .container-box-lb {
+      width: 80%;
+      flex-wrap: wrap;
+      justify-content: center;
+     }
+     .lb-image {
+      max-width: 300px;
+      height: 240px;
+      margin: 10px 0;
+    }
+    .lb-thumbnail {
+      max-width: 60px;
+      height: 48px;
+    }
 
  }
 
