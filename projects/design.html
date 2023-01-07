@@ -55,6 +55,31 @@
 
     </div>
 
+    <!-- dot nav -->
+
+    <div class="dotstyle-outer">
+
+        <div class="dotstyle dotstyle-fillin">
+
+            <ul>
+                <li id="intro-dot" class="current" onclick="dotstyleNav(this)">
+                    <a href="#intro">intro</a>
+                </li>
+                <li id="marinade-dot" onclick="dotstyleNav(this)">
+                    <a href="#marinade">marinade</a>
+                </li>
+                <li id="freak-dot" onclick="dotstyleNav(this)">
+                    <a href="#freak">freak</a>
+                </li>
+                <li id="nm-dot" onclick="dotstyleNav(this)">
+                    <a href="#nm">northern mile</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
     <header>
 
         <nav class="navbar">
@@ -76,13 +101,13 @@
 
     </header>
 
-    <div class="outer-wrapper-scroll">
+    <div class="outer-wrapper-scroll" id="outer-wrapper-scroll">
 
-        <div class="wrapper-scroll">
+        <div class="wrapper-scroll" id="wrapper-scroll">
 
             <div class="slide one">
 
-                <div class="container-box-scroll">
+                <div class="container-box-scroll" id="intro">
 
                     <div class="container-box-image-scroll">
                         <img src="../assets/img/s-logo.png">
@@ -98,7 +123,7 @@
 
             <div class="slide two">
 
-                <div class="container-box-lb two">
+                <div class="container-box-lb two" id="marinade">
 
                     <div class="container-box-lb-image">
 
@@ -112,43 +137,6 @@
                             <img class="lb-thumbnail" src="../assets/img/marinade_rama u80a_2k.png" alt="marinade" onclick="setMain(this)">
                             <img class="lb-thumbnail" src="../assets/img/marinade_dark_rama u80a2_2k.png" alt="marinade" onclick="setMain(this)">
                         </div>
-
-                        <script>
-                            function setMain(thumbnailImage) {
-
-                                // change the main image to the thumbnail that was clicked
-                                var mainImage = document.getElementById("imageBox");
-                                mainImage.src = thumbnailImage.src;
-
-                                var childImages = document.getElementsByClassName("lb-thumbnail");
-                                var i;
-
-                                // clear all other borders
-                                for ( i = 0; i < childImages.length; i++ ) {
-                                    childImages[i].style.border = "";
-                                }
-
-                                // add border to the thumbnail that was clicked
-                                thumbnailImage.style.border = "0.5px solid #333";
-                            }
-
-                            function openModal(img) {
-
-                                // change the modal image to the thumbnail that was clicked
-                                var modalImage = document.getElementById("modalImage");
-                                modalImage.src = img.src;
-
-                                // make modal visible
-                                var modal = document.getElementById("myModal");
-                                modal.style.display = "block";
-                            }
-
-                            function closeModal() {
-
-                                var modal = document.getElementById("myModal");
-                                modal.style.display = "none";
-                            }
-                        </script>
 
                     </div>
 
@@ -168,7 +156,7 @@
 
             <div class="slide three">
 
-                <div class="container-box-scroll three">
+                <div class="container-box-scroll three" id="freak">
 
                     <div class="container-box-image-scroll">
                         <img src="../assets/img/s-logo.png">
@@ -184,7 +172,7 @@
 
             <div class="slide four">
 
-                <div class="container-box-scroll four">
+                <div class="container-box-scroll four" id="nm">
 
                     <div class="container-box-image-scroll">
                         <img src="../assets/img/s-logo.png">
@@ -227,6 +215,100 @@
         </div>
 
     </footer>
+
+    <script>
+
+        document.addEventListener('scrollEnd', scrollTrigger);
+
+        function setMain(thumbnailImage) {
+
+            // change the main image to the thumbnail that was clicked
+            var mainImage = document.getElementById("imageBox");
+            mainImage.src = thumbnailImage.src;
+
+            var childImages = document.getElementsByClassName("lb-thumbnail");
+            var i;
+
+            // clear all other borders
+            for ( i = 0; i < childImages.length; i++ ) {
+                childImages[i].style.border = "";
+            }
+
+            // add border to the thumbnail that was clicked
+            thumbnailImage.style.border = "0.5px solid #333";
+        }
+
+        function openModal(img) {
+
+            // change the modal image to the thumbnail that was clicked
+            var modalImage = document.getElementById("modalImage");
+            modalImage.src = img.src;
+
+            // make modal visible
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        function dotstyleNav(clickedDot) {
+
+            var allDots = document.getElementsByClassName("current");
+            var i;
+
+            // clear all other dots
+            for ( i = 0; i < allDots.length; i++ ) {
+                allDots[i].className = '';
+            }
+
+            // fill in dot that was clicked
+            clickedDot.className = "current";
+        }
+
+        window.addEventListener('wheel', function() {
+            scrollTrigger();
+        });
+
+        function scrollTrigger() {
+
+            var intro_pos = document.getElementById('intro');
+            var marinade_pos = document.getElementById('marinade');
+            var freak_pos = document.getElementById('freak');
+            var nm_pos = document.getElementById('nm');
+
+            if (checkVisible(intro_pos)) {
+                dotstyleNav(document.getElementById("intro-dot"));
+            }
+            else if (checkVisible(marinade_pos)) {
+                dotstyleNav(document.getElementById("marinade-dot"));   
+            }
+            else if (checkVisible(freak_pos)) {
+                dotstyleNav(document.getElementById("freak-dot"));
+            }
+            else if (checkVisible(nm_pos)) {
+                dotstyleNav(document.getElementById("nm-dot"));
+            }
+        }
+
+        function checkVisible(element) {
+            console.log('In checkVisible()!');
+
+            var elmPos = element.offsetLeft + (element.offsetWidth/2);
+            console.log(element);
+            console.log('elmPos: ' + elmPos);
+
+            // find how far right was scrolled through wrapper-scroll div
+            var curPos = document.getElementById('outer-wrapper-scroll').scrollTop;
+            console.log('curPos: ' + curPos);
+            
+            return (elmPos > curPos) ? true : false;
+        }
+
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->
