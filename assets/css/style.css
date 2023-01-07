@@ -635,7 +635,6 @@
       flex-wrap: wrap;
       justify-content: center;
       max-height: fit-content;
-      margin-top: -100px;
       padding: 10px;
     }
 
@@ -761,7 +760,7 @@
       background-color: #44423f;
       color: #f9f2ec;
       font-size: xx-small;
-      height: 20px;
+      height: 30px;
       padding-top: 3px;
       padding-bottom: 9px;
       
