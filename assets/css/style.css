@@ -630,7 +630,8 @@
 
     /* non-scroll pages */
     .outer-wrapper {
-      margin-top: 80px;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
     }
 
     .container-box {
@@ -673,7 +674,8 @@
     /* scrolling pages */
 
     .outer-wrapper-scroll {
-      margin-top: 80px;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
       height: 100%;
       width: 100%;
       transform: none;
