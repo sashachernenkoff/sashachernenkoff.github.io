@@ -830,6 +830,23 @@
 
 
 
+    /* parallelogram index */
+
+    .wrapper-par {
+      align-items: space-evenly;
+      justify-content: flex-start;
+      margin-top: 100px;
+    }
+
+    .parallelogram {
+      left: -15vw;
+      height: 10vh;
+      width: 65vw;
+    }
+
+
+
+
     /* footer */
     .footer {
       background-color: #44423f;
