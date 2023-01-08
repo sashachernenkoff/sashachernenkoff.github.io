@@ -19,12 +19,12 @@ body {
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   user-select: none;
-  height: 100vh;
+  min-height: 100vh;
   min-width: 100vw;
   z-index: 1000;
   margin: 0px!important;
   padding: 0px!important;
-  overflow: hidden;
+  overflow: visible;
 }
 a {
   color: inherit;
@@ -205,21 +205,14 @@ a:hover {
 
 /* non-scroll pages */
 
-.outer-wrapper {
-  height: 100vh;
+.wrapper {
   width: 100vw;
-  display: flex;
-  overflow-y: scroll;
+  overflow: scroll;
+  position: absolute;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scroll-snap-stop: always;
-}
-.wrapper {
-  height: 100%;
-  width: 100%;
   display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -237,6 +230,8 @@ a:hover {
   padding: 30px;
   text-align: center;
   font-size: small;
+  margin-top: 100px;
+  margin-bottom: 80px;
 }
 .container-box-text {
   padding: 30px 50px;
@@ -441,7 +436,7 @@ a:hover {
   max-width: 500px;
   height: 400px;
   margin: 20px 0;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 .lb-thumbnail-wrapper {
   width: 100%;
@@ -487,6 +482,7 @@ a:hover {
   height: 100%;
   object-fit: contain;
   object-position: center center;
+  cursor: zoom-out;
 }
 .modal-content, #caption { 
   animation-name: zoom;
@@ -532,12 +528,12 @@ a:hover {
 /* parallelogram index */
 
 .wrapper-par {
-  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-top: 150px;
 }
 .parallelogram {
   -webkit-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
@@ -631,8 +627,7 @@ a:hover {
   /* home page specific */
 
   .container-box-home {
-    position: absolute;
-    top: 90px;
+    margin-top: 150px;
   }
 
   .hello-myname {
@@ -659,21 +654,17 @@ a:hover {
 
 
   /* non-scroll pages */
-  .outer-wrapper {
-
-  }
 
   .wrapper {
-    padding-top: 100px;
-    padding-bottom: 80px;
+    flex-direction: column;
   }
 
   .container-box {
+    max-height: fit-content;
     width: 80%;
     flex-direction: column;
     padding: 10px;
     margin-top: 100px;
-    margin-bottom: 80px;
   }
 
   .container-box-text {
@@ -705,7 +696,6 @@ a:hover {
   /* scrolling pages */
 
   .outer-wrapper-scroll {
-    height: 100vh;
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
