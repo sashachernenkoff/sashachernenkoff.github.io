@@ -218,6 +218,7 @@ a:hover {
   height: 100%;
   width: 100%;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -664,13 +665,15 @@ a:hover {
 
   .wrapper {
     padding-top: 100px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
 
   .container-box {
     width: 80%;
     flex-direction: column;
     padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 80px;
   }
 
   .container-box-text {
@@ -813,7 +816,6 @@ a:hover {
     height: 30px;
     padding-top: 3px;
     padding-bottom: 9px;
-    
   }
 
   .block-relative-fitcontet {
