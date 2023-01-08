@@ -76,14 +76,14 @@
   
  .home li {
   list-style: none;
-  margin: 20px;
+  margin: 0 20px;
   padding: 5px 10px;
   flex: 1 0 100px;
  }
 
  .nav-links li {
    list-style: none;
-   margin: 20px;
+   margin: 0 20px;
    padding: 5px 20px;
    flex: 1 0 100px;
 
