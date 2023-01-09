@@ -127,11 +127,9 @@ a:hover {
 
 /* index */
 
-.index {
-  transform: rotate(-11deg);
-  position: absolute;
-  top: 50px;
-  left: 20%;
+.home:after {
+  content: 'home';
+  transform: rotate(-11deg) translateX(-130px) translateY(-30px);
   z-index: 9909;
   font-size: medium;
   color: white;
@@ -639,6 +637,15 @@ a:hover {
     margin: 0 10px;
     padding: 5px 10px;
     flex: 1 0 70px;
+  }
+
+
+
+
+  /* index */
+
+  .home:after {
+    transform: rotate(-11deg) translateX(-110px) translateY(-20px);
   }
 
 
