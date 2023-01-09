@@ -112,7 +112,7 @@ a:hover {
   transition-timing-function: ease-out;
 }
 .nav-links li:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
-  color: white;
+  color: #f9f2ec;
 }
 .nav-links li:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
   -webkit-transform: scaleX(1);
@@ -121,6 +121,27 @@ a:hover {
 .nav-links a {
   color: #44423f;
 }
+
+
+
+
+/* index */
+
+.index {
+  transform: rotate(-11deg);
+  position: absolute;
+  top: 40px;
+  left: 45%;
+  z-index: 9959;
+  font-size: medium;
+  color: white;
+  width: fit-content;
+  box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
+  background: #44423f!important;
+  padding: 7px 25px;
+  letter-spacing: 0.1em;
+}
+
 
 
 
@@ -230,7 +251,7 @@ a:hover {
   padding: 30px;
   text-align: center;
   font-size: small;
-  margin-top: 100px;
+  margin-top: 140px;
   margin-bottom: 80px;
 }
 .container-box-text {
