@@ -138,8 +138,8 @@ a:hover {
   width: fit-content;
   box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
   background: #44423f!important;
-  padding: 7px 25px;
-  letter-spacing: 0.1em;
+  padding: 3px 25px;
+  letter-spacing: 0.075em;
 }
 
 
