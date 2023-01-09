@@ -609,18 +609,16 @@ a:hover {
   .navbar {
     justify-content: space-around;
   }
-
   .home li {
     margin: 0 10px;
     padding: 5px 10px;
     flex: 1 0 70px;
   }
-  
-    .nav-links li {
-      margin: 0 10px;
-      padding: 5px 10px;
-      flex: 1 0 70px;
-    }
+  .nav-links li {
+    margin: 0 10px;
+    padding: 5px 10px;
+    flex: 1 0 70px;
+  }
 
 
 
@@ -629,23 +627,19 @@ a:hover {
   .container-box-home {
     margin-top: 150px;
   }
-
   .hello-myname {
     font-size: x-large;
     box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 50%);
     background: white;
     padding: 2px 4px !important;
   }
-
   .hello-myname .name {
     display: block!;
     font-size: 22px !important;
   }
-
   .hello-myname .hi-this-is {
     font-size: 12px !important;
   }
-
   .current-title {
     padding: 2px 4px;
   }
@@ -658,7 +652,6 @@ a:hover {
   .wrapper {
     flex-direction: column;
   }
-
   .container-box {
     max-height: fit-content;
     width: 80%;
@@ -666,12 +659,11 @@ a:hover {
     padding: 10px;
     margin-top: 100px;
   }
-
   .container-box-text {
     padding: 5px 20px;
     flex: 1 1 auto;
   }
-  
+
   .container-box-image {
     width: 100%;
     display: flex;
@@ -681,14 +673,13 @@ a:hover {
     padding: 5px 0px!important;
     flex: 0 1 auto;
   }
-
   .about-image {
     margin-bottom: 5%;
     margin-right: 40px;
     margin-left: 20px;
     max-height: 100px;
     width: auto;
-    }
+  }
 
 
 
@@ -696,27 +687,23 @@ a:hover {
   /* scrolling pages */
 
   .outer-wrapper-scroll {
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 100px 0;
+    height: 100vh;
+    width: 100vw;
     transform: none;
     transform-origin: none;
     position: static;
   }
   .wrapper-scroll {
+    height: 400vh;
+    width: 100vw;
+    flex-direction: column;
     transform: none;
     transform-origin: none;
-    flex-direction: column;
   }
-
   .slide {
-    scroll-snap-align: start;
     position: relative;
-    flex: 0 0 100%;
     margin: 0;
   }
-
   .container-box-scroll {
     width: 80%;
     flex-wrap: wrap;
@@ -725,11 +712,9 @@ a:hover {
     margin: 50px 0;
     padding: 10px;
   }
-
   .container-box-text-scroll {
     padding: 5px 20px;
   }
-
   .container-box-image-scroll {
     width: 100%;
     display: flex;
@@ -746,15 +731,14 @@ a:hover {
 
   /* image gallery and modal */ 
 
-    .container-box-lb {
+  .container-box-lb {
     width: 80%;
     flex-wrap: wrap;
     justify-content: center;
     max-height: fit-content;
     padding: 10px;
-    }
-
-    .lb-image {
+  }
+  .lb-image {
     max-width: 300px;
     height: 240px;
     margin: 10px 0;
@@ -763,7 +747,6 @@ a:hover {
     max-width: 60px;
     height: 48px;
   }
-
   .container-box-lb-text {
     margin-top: 20px;
     padding: 5px 10px;
@@ -788,7 +771,6 @@ a:hover {
     justify-content: flex-start;
     margin-top: 100px;
   }
-
   .parallelogram {
     left: -15vw;
     height: 10vh;
@@ -807,11 +789,9 @@ a:hover {
     padding-top: 3px;
     padding-bottom: 9px;
   }
-
   .block-relative-fitcontet {
     display: block;width: fit-content; position: relative;
   }
-
   .fab {
     color: #44423f!important;
   }
