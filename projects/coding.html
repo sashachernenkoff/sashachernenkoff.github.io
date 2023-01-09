@@ -145,16 +145,21 @@
     <script src="../inc/bootstrap5/js/bootstrap.min.js"></script>
     <script src="../inc/fontawesome5/js/all.min.js"></script>
 
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/dotnav.js"></script>
 
     <script>
 
         window.addEventListener('wheel', function() {
-            scrollTrigger();
+            setTimeout(() => {  scrollTrigger(); }, 150);
         });
 
         window.addEventListener('scroll', function() {
-            scrollTrigger();
+            setTimeout(() => {  scrollTrigger(); }, 150);
+        });
+
+        window.addEventListener('scrollEnd', function() {
+            setTimeout(() => {  scrollTrigger(); }, 150);
         });
 
     </script>

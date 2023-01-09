@@ -207,96 +207,6 @@
 
     </footer>
 
-    <script>
-
-        document.addEventListener('scrollEnd', scrollTrigger);
-
-        function setMain(thumbnailImage) {
-
-            // change the main image to the thumbnail that was clicked
-            var mainImage = document.getElementById("imageBox");
-            mainImage.src = thumbnailImage.src;
-
-            var childImages = document.getElementsByClassName("lb-thumbnail");
-            var i;
-
-            // clear all other borders
-            for ( i = 0; i < childImages.length; i++ ) {
-                childImages[i].style.border = "";
-            }
-
-            // add border to the thumbnail that was clicked
-            thumbnailImage.style.border = "0.5px solid #333";
-        }
-
-        function openModal(img) {
-
-            // change the modal image to the thumbnail that was clicked
-            var modalImage = document.getElementById("modalImage");
-            modalImage.src = img.src;
-
-            // make modal visible
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
-        }
-
-        function closeModal() {
-
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
-
-        function dotstyleNav(clickedDot) {
-
-            var allDots = document.getElementsByClassName("current");
-            var i;
-
-            // clear all other dots
-            for ( i = 0; i < allDots.length; i++ ) {
-                allDots[i].className = '';
-            }
-
-            // fill in dot that was clicked
-            clickedDot.className = "current";
-        }
-
-        window.addEventListener('wheel', function() {
-            scrollTrigger();
-        });
-
-        function scrollTrigger() {
-
-            var marinade_pos = document.getElementById('one');
-            var freak_pos = document.getElementById('two');
-            var nm_pos = document.getElementById('three');
-
-            if (checkVisible(marinade_pos)) {
-                dotstyleNav(document.getElementById("one-dot"));   
-            }
-            else if (checkVisible(freak_pos)) {
-                dotstyleNav(document.getElementById("two-dot"));
-            }
-            else if (checkVisible(nm_pos)) {
-                dotstyleNav(document.getElementById("three-dot"));
-            }
-        }
-
-        function checkVisible(element) {
-            console.log('In checkVisible()!');
-
-            var elmPos = element.offsetLeft + (element.offsetWidth/2);
-            console.log(element);
-            console.log('elmPos: ' + elmPos);
-
-            // find how far right was scrolled through wrapper-scroll div
-            var curPos = document.getElementById('outer-wrapper-scroll').scrollTop;
-            console.log('curPos: ' + curPos);
-            
-            return (elmPos > curPos) ? true : false;
-        }
-
-    </script>
-
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -305,16 +215,21 @@
     <script src="../inc/bootstrap5/js/bootstrap.min.js"></script>
     <script src="../inc/fontawesome5/js/all.min.js"></script>
 
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/dotnav.js"></script>
 
     <script>
 
         window.addEventListener('wheel', function() {
-            scrollTrigger();
+            setTimeout(() => {  scrollTrigger(); }, 150);
         });
 
         window.addEventListener('scroll', function() {
-            scrollTrigger();
+            setTimeout(() => {  scrollTrigger(); }, 150);
+        });
+
+        window.addEventListener('scrollEnd', function() {
+            setTimeout(() => {  scrollTrigger(); }, 150);
         });
 
     </script>
