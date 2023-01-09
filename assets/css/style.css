@@ -130,8 +130,8 @@ a:hover {
 .index {
   transform: rotate(-11deg);
   position: absolute;
-  top: 40px;
-  left: 45%;
+  top: 50px;
+  left: 20%;
   z-index: 9959;
   font-size: medium;
   color: white;
@@ -640,6 +640,20 @@ a:hover {
     padding: 5px 10px;
     flex: 1 0 70px;
   }
+
+
+
+
+  /* index */
+
+  .index {
+    top: 50px;
+    left: 10%;
+    font-size: small;
+    padding: 2px 21px;
+    letter-spacing: 0.05em;
+  }
+
 
 
 
