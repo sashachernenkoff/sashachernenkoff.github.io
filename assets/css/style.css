@@ -129,14 +129,14 @@ a:hover {
 
 .home:after {
   content: 'home';
-  transform: rotate(-11deg) translateX(-130px) translateY(-30px);
+  transform: rotate(-11deg) translateX(-140px) translateY(-30px);
   z-index: 9909;
   font-size: medium;
   color: white;
-  width: fit-content;
+  min-width: 130px;
   box-shadow: 3px 3px 6px -1px rgb(148 148 148 / 80%);
   background: #44423f!important;
-  padding: 0px 25px;
+  text-align: center;
   letter-spacing: 0.03em;
 }
 
@@ -645,7 +645,8 @@ a:hover {
   /* index */
 
   .home:after {
-    transform: rotate(-11deg) translateX(-110px) translateY(-20px);
+    transform: rotate(-11deg) translateX(-117px) translateY(-22px);
+    min-width: 110px;
   }
 
 
