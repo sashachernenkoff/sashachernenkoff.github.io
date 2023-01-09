@@ -111,7 +111,7 @@ a:hover {
   transition-timing-function: ease-out;
 }
 .nav-links li:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
-  color: #f9f2ec;
+  color: white;
 }
 .nav-links li:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
   -webkit-transform: scaleX(1);
@@ -119,6 +119,9 @@ a:hover {
 }
 .nav-links a {
   color: #44423f;
+}
+.nav-links a:hover {
+  color: white;
 }
 .dropdown_menu li:before { /* dropdown sweep color */
   background: #aa5f56;
