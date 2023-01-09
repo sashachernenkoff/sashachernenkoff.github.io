@@ -62,17 +62,14 @@
         <div class="dotstyle dotstyle-fillin">
 
             <ul>
-                <li id="intro-dot" class="current" onclick="dotstyleNav(this)">
-                    <a href="#intro">intro</a>
+                <li id="one-dot" class="current" onclick="dotstyleNav(this)">
+                    <a href="#one">one</a>
                 </li>
-                <li id="marinade-dot" onclick="dotstyleNav(this)">
-                    <a href="#marinade">marinade</a>
+                <li id="two-dot" onclick="dotstyleNav(this)">
+                    <a href="#two">two</a>
                 </li>
-                <li id="freak-dot" onclick="dotstyleNav(this)">
-                    <a href="#freak">freak</a>
-                </li>
-                <li id="nm-dot" onclick="dotstyleNav(this)">
-                    <a href="#nm">northern mile</a>
+                <li id="three-dot" onclick="dotstyleNav(this)">
+                    <a href="#three">three</a>
                 </li>
             </ul>
 
@@ -107,23 +104,7 @@
 
             <div class="slide one">
 
-                <div class="container-box-scroll" id="intro">
-
-                    <div class="container-box-image-scroll">
-                        <img src="../assets/img/s-logo.png">
-                    </div>
-
-                    <div class="container-box-text-scroll">
-                        <span class="background-text">intro to my design</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="slide two">
-
-                <div class="container-box-lb two" id="marinade">
+                <div class="container-box-lb one" id="one">
 
                     <div class="container-box-lb-image">
 
@@ -154,9 +135,9 @@
 
             </div>
 
-            <div class="slide three">
+            <div class="slide two">
 
-                <div class="container-box-scroll three" id="freak">
+                <div class="container-box-scroll two" id="two">
 
                     <div class="container-box-image-scroll">
                         <img src="../assets/img/s-logo.png">
@@ -170,9 +151,9 @@
 
             </div>
 
-            <div class="slide four">
+            <div class="slide three">
 
-                <div class="container-box-scroll four" id="nm">
+                <div class="container-box-scroll three" id="three">
 
                     <div class="container-box-image-scroll">
                         <img src="../assets/img/s-logo.png">
@@ -275,22 +256,18 @@
 
         function scrollTrigger() {
 
-            var intro_pos = document.getElementById('intro');
-            var marinade_pos = document.getElementById('marinade');
-            var freak_pos = document.getElementById('freak');
-            var nm_pos = document.getElementById('nm');
+            var marinade_pos = document.getElementById('one');
+            var freak_pos = document.getElementById('two');
+            var nm_pos = document.getElementById('three');
 
-            if (checkVisible(intro_pos)) {
-                dotstyleNav(document.getElementById("intro-dot"));
-            }
-            else if (checkVisible(marinade_pos)) {
-                dotstyleNav(document.getElementById("marinade-dot"));   
+            if (checkVisible(marinade_pos)) {
+                dotstyleNav(document.getElementById("one-dot"));   
             }
             else if (checkVisible(freak_pos)) {
-                dotstyleNav(document.getElementById("freak-dot"));
+                dotstyleNav(document.getElementById("two-dot"));
             }
             else if (checkVisible(nm_pos)) {
-                dotstyleNav(document.getElementById("nm-dot"));
+                dotstyleNav(document.getElementById("three-dot"));
             }
         }
 
