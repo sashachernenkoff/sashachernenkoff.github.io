@@ -117,10 +117,10 @@ a:hover {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-.nav-links a {
-  color: #44423f;
-}
 .nav-links a:hover {
+  color: white;
+}
+.dropdown_menu li:hover .navlinks a {
   color: white;
 }
 .dropdown_menu li:before { /* dropdown sweep color */
@@ -139,7 +139,6 @@ a:hover {
   z-index: 100;
 }
 .dropdown:hover {
-  background: #f9f2ec;
   cursor: pointer;
 }
 .dropdown:hover .dropdown_menu li {
