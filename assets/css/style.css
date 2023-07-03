@@ -413,8 +413,12 @@ a:hover {
   text-align: left;
 }
 .container-box-image-scroll {
-  padding: 30px 50px;
+  box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
+  padding: 0px 0px;
   flex: 0 1 45%;
+  object-position: center center;
+  max-width: 500px;
+  height: 400px;
 }
 
 
@@ -530,7 +534,18 @@ a:hover {
 }
 .lb-image-2 {
   box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
-  background-color: #e4e4e4;
+  background-color: #f9f2ec;
+  width: 100%;
+  object-fit: contain;
+  object-position: center center;
+  max-width: 500px;
+  height: 400px;
+  margin: 20px 0;
+  cursor: zoom-in;
+}
+.lb-image-3, .lb-image-4, .lb-image-5 {
+  box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
+  background-color: #fff;
   width: 100%;
   object-fit: contain;
   object-position: center center;
@@ -558,7 +573,18 @@ a:hover {
 }
 .lb-thumbnail-2 {
   box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
-  background-color: #e4e4e4;
+  background-color: #f9f2ec;
+  object-fit: contain;
+  object-position: center center;
+  max-width: 100px;
+  height: 80px;
+  margin: 0 7px;
+  cursor: pointer;
+  opacity: 1;
+}
+.lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5  {
+  box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
+  background-color: #fff;
   object-fit: contain;
   object-position: center center;
   max-width: 100px;

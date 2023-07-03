@@ -41,6 +41,20 @@
 
 <body>
 
+    <!-- modal image popup -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+
+        <div class="close">
+
+            <span class="close-x">&times;</span>
+            <span class="close-text">close</span>
+
+        </div>
+
+        <img class="modal-content" id="modalImage" src="../assets/img/mpsi-genotyped.png" alt="mps">
+
+    </div>
+
     <!-- dot nav -->
 
     <div class="dotstyle-outer">
@@ -102,12 +116,34 @@
 
                 <div class="container-box-scroll one" id="one">
 
-                    <div class="container-box-image-scroll">
-                        <img src="../assets/img/s-logo.png">
+                    <div class="container-box-lb-image">
+
+                        <div class="lb-image-container">
+                            <img class="lb-image-3" id="imageBox-3" src="../assets/img/mpsi-genotyped.png" alt="mps" onclick="openModal(this)">
+                        </div>
+
+                        <div class="lb-thumbnail-wrapper">
+                            <img class="lb-thumbnail-3" src="../assets/img/mpsi-genotyped.png" alt="mps" style="border: 0.5px solid #333;" onclick="setMain3(this)">
+                            <img class="lb-thumbnail-3" src="../assets/img/mpsi-chromatogram.png" alt="mps" onclick="setMain3(this)">
+                            <img class="lb-thumbnail-3" src="../assets/img/mpsii.png" alt="mps" onclick="setMain3(this)">
+                        </div>
+
                     </div>
 
-                    <div class="container-box-text-scroll">
-                        <span class="background-text">perkinelmer MPS I & II</span>
+                    <div class="container-box-lb-text">
+                        <span class="background-text">MPS I & II
+                            <br><br>
+                            at PerkinElmer Genomics, i developed semi-quantitative assays to detect the 
+                            presence of analytes (found to only be present in individuals with MPS I & II) from dried blood spots 
+                            using LC-MS/MS, which can be run simultaneously as a panel. these markers are virtually undetectable within 
+                            the normal population, yielding a larger minimum differential factor and higher confidence in results 
+                            compared to traditional tests for MPS. in addition, the tests also allowed for differentiation of psedodeficient 
+                            allele variants from pathogenic variants, reducing the number of false positives commonly seen in MPS I testing.
+                            <br><br>
+                            we then began to investigate trends between variant types and MPS marker concentrations, specifically for MPS I, as 
+                            we believe it could prove clincally useful in understanding variants of unknown significance, which currently 
+                            yield ambiguity in predicting clinical status.
+                        </span>
                     </div>
 
                 </div>
@@ -118,12 +154,21 @@
 
                 <div class="container-box-scroll two" id="two">
 
-                    <div class="container-box-image-scroll">
-                        <img src="../assets/img/s-logo.png">
+                    <div class="container-box-lb-image">
+
+                        <div class="lb-image-container">
+                            <img class="lb-image-4" id="imageBox-4" src="../assets/img/crim.png" alt="crim" onclick="openModal(this)">
+                        </div>
+
                     </div>
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text">Pompe disease</span>
+                        <span class="background-text">pompe CRIM-status determination
+                            <br><br>
+                            at PerkinElmer Genomics, i developed a qualitative assay to detect the presence of 
+                            endogenous acid α-glucosidase (GAA) within human peripheral blood mononuclear cells (PBMCs) isolated from 
+                            whole blood using Western blotting. the assay allows for rapid CRIM-status determination in patients with 
+                            Pompe disease in order to more quickly initiate immune tolerance induction.</span>
                     </div>
 
                 </div>
@@ -134,12 +179,26 @@
 
                 <div class="container-box-scroll three" id="three">
 
-                    <div class="container-box-image-scroll">
-                        <img src="../assets/img/s-logo.png">
+                    <div class="container-box-lb-image">
+
+                        <div class="lb-image-container">
+                            <img class="lb-image-5" id="imageBox-5" src="../assets/img/kdm6b-results.png" alt="kdm6b" onclick="openModal(this)">
+                        </div>
+
+                        <div class="lb-thumbnail-wrapper">
+                            <img class="lb-thumbnail-5" src="../assets/img/kdm6b-results.png" alt="kdm6b" style="border: 0.5px solid #333;" onclick="setMain5(this)">
+                            <img class="lb-thumbnail-5" src="../assets/img/kdm6b-scheme.png" alt="kdm6b" onclick="setMain5(this)">
+                            <img class="lb-thumbnail-5" src="../assets/img/kdm6b-ligands.png" alt="kdm6b" onclick="setMain5(this)">
+                        </div>
+
                     </div>
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text">undergarduate research</span>
+                        <span class="background-text">kdm6b 'bump-and-hole' research
+                            <br><br>
+                            as an undergraduate at the University of Pittsburgh, i  utilized the ‘bump-and-hole’ method 
+                            to develop variants of KDM6B with ‘hole-modified’ active sites which were sensitive to selective inhibition by α-ketoglutarate 
+                            engineered with complementary steric ‘bumps’ to help elucidate KDM6B's specific epigenetic function.
                     </div>
 
                 </div>
