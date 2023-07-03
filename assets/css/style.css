@@ -901,12 +901,12 @@ a:hover {
     max-height: fit-content;
     padding: 10px;
   }
-  .lb-image-1, .lb-image-2 {
+  .lb-image-1, .lb-image-2, .lb-image-3, .lb-image-4, .lb-image-5 {
     max-width: 300px;
     height: 240px;
     margin: 10px 0;
   }
-  .lb-thumbnail-1, lb-thumbnail-2 {
+  .lb-thumbnail-1, lb-thumbnail-2, .lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5 {
     max-width: 60px;
     height: 48px;
   }
