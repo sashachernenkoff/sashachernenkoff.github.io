@@ -27,11 +27,14 @@ body {
   overflow: visible;
 }
 a {
-  color: inherit;
+  color: #7a6f66;
   text-decoration: none;
 }
+a:visited {
+  color: #98756b;
+}
 a:hover {
-  color: #aa5f56;
+  color: #d17b6d;
   text-decoration: none;
 }
 
@@ -118,10 +121,10 @@ a:hover {
   transform: scaleX(1);
 }
 .nav-links a:hover {
-  color: white;
+  color: white!important;
 }
 .dropdown_menu li:hover .navlinks a {
-  color: white;
+  color: white!important;
 }
 .dropdown_menu li:before { /* dropdown sweep color */
   background: #aa5f56;
@@ -189,7 +192,14 @@ a:hover {
       transform: scaleY(1);
   }
 }
-
+/* Override link colors in the navbar */
+.nav-links a, .nav-links a:visited {
+  color: #44423f;
+}
+/* Ensure the main menu link stays white when hovering over its dropdown */
+.nav-links li:hover a, .nav-links li:hover a:hover, .dropdown_menu li:hover a {
+  color: white !important;
+}
 
 
 
