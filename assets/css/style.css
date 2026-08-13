@@ -263,8 +263,8 @@ a:hover {
   background-size: cover;
   background-color: white;
   transition: width 1s;
-  margin: 0 auto;
-  padding: 30px;  
+  margin: 0 auto 40px;
+  padding: 30px;
   text-align: center;
   position: relative;
 }
