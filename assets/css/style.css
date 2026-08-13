@@ -24,7 +24,7 @@ body {
   z-index: 1000;
   margin: 0px!important;
   padding: 0px!important;
-  overflow: visible;
+  overflow: hidden;
 }
 a {
   color: #7a6f66;
@@ -263,7 +263,7 @@ a:hover {
   background-size: cover;
   background-color: white;
   transition: width 1s;
-  margin: 14% auto;
+  margin: 0 auto;
   padding: 30px;  
   text-align: center;
   position: relative;
@@ -328,12 +328,12 @@ a:hover {
 /* non-scroll pages */
 
 .wrapper {
-  width: 100vw;
-  overflow: scroll;
-  position: absolute;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  scroll-snap-stop: always;
+  position: fixed;
+  top: 80px;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,8 +352,9 @@ a:hover {
   padding: 30px;
   text-align: center;
   font-size: small;
-  margin-top: 140px;
-  margin-bottom: 80px;
+  margin: 20px 0;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
 }
 .container-box-text {
   padding: 30px 50px;
@@ -823,7 +824,7 @@ a:hover {
   /* home page specific */
 
   .container-box-home {
-    margin-top: 150px;
+    margin-top: 0;
   }
   .hello-myname {
     font-size: x-large;
@@ -851,11 +852,12 @@ a:hover {
     flex-direction: column;
   }
   .container-box {
-    max-height: fit-content;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
     width: 80%;
     flex-direction: column;
     padding: 10px;
-    margin-top: 100px;
+    margin: 10px 0;
   }
   .container-box-text {
     padding: 5px 20px;
