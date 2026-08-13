@@ -34,7 +34,7 @@ a:visited {
   color: #98756b;
 }
 a:hover {
-  color: #d17b6d;
+  color: #6e7fc4;
   text-decoration: none;
 }
 
@@ -127,7 +127,7 @@ a:hover {
   color: white!important;
 }
 .dropdown_menu li:before { /* dropdown sweep color */
-  background: #aa5f56;
+  background: #5b6a99;
 }
 .dropdown {
   padding: 3px 20px;
@@ -298,7 +298,7 @@ a:hover {
   color: #44423f!important;
 }
 #social-icons .iconi:hover {
-  color: #aa5f56!important;
+  color: #5b6a99!important;
 }
 
 
@@ -658,7 +658,7 @@ a:hover {
 }
 .close:hover,
 .close:focus {
-  color: #aa5f56;
+  color: #5b6a99;
   text-decoration: none;
   cursor: pointer;
 }
