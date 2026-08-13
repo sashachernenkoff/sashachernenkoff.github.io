@@ -15,10 +15,10 @@ body {
   transition: all 1s;
   color:#44423f;
   background-color: #f9f2ec;
-  -webkit-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
   min-height: 100vh;
   min-width: 100vw;
   z-index: 1000;
@@ -90,8 +90,8 @@ a:hover {
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.05s;
+  transition-duration: 0.05s;
 }
 .nav-links li:before {
   content: "";
