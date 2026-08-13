@@ -14,28 +14,27 @@
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="../inc/fontawesome5/css/all.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    
+
     <title>sasha chernenkoff</title>
 
 <meta property="og:site_name" content="sasha chernenkoff"/>
 <meta property="og:title" content="sasha chernenkoff"/>
 <meta property="og:url" content=""/>
 <meta property="og:type" content="website"/>
-<meta property="og:description" content="learning how to code"/>
+<meta property="og:description" content="bioinformatics research — genomic foundation models, gene expression, newborn screening"/>
 <meta itemprop="name" content="sasha chernenkoff"/>
 <meta itemprop="url" content=""/>
-<meta itemprop="description" content="sasha chernenkoff 's official website"/>
+<meta itemprop="description" content="sasha chernenkoff's research"/>
 <meta name="twitter:title" content="sasha chernenkoff"/>
 <meta name="twitter:url" content=""/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="sasha chernenkoff - aspiring developer"/>
-<meta name="Description" content="learning how to code"> 
-<!-- <meta property=”og:image” content=””> -->
+<meta name="twitter:description" content="sasha chernenkoff — bioinformatics research"/>
+<meta name="Description" content="bioinformatics research — genomic foundation models">
 <meta name="author" content="sasha chernenkoff">
-<meta name="keywords" content="sasha chernenkoff, software developer">
+<meta name="keywords" content="sasha chernenkoff, bioinformatics, genomics, machine learning, foundation models">
 
 </head>
 
@@ -45,36 +44,25 @@
     <div id="myModal" class="modal" onclick="closeModal()">
 
         <div class="close">
-
             <span class="close-x">&times;</span>
             <span class="close-text">close</span>
-
         </div>
 
-        <img class="modal-content" id="modalImage" src="../assets/img/mpsi-genotyped.png" alt="mps">
+        <img class="modal-content" id="modalImage" src="../assets/img/mpsi-genotyped.png" alt="research">
 
     </div>
 
     <!-- dot nav -->
-
     <div class="dotstyle-outer">
-
         <div class="dotstyle dotstyle-fillin">
-
             <ul>
-                <li id="one-dot" class="current" onclick="dotstyleNav(this)">
-                    <a href="#one">one</a>
-                </li>
-                <li id="two-dot" onclick="dotstyleNav(this)">
-                    <a href="#two">two</a>
-                </li>
-                <li id="three-dot" onclick="dotstyleNav(this)">
-                    <a href="#three">three</a>
-                </li>
+                <li id="one-dot" class="current" onclick="dotstyleNav(this)"><a href="#one">one</a></li>
+                <li id="two-dot" onclick="dotstyleNav(this)"><a href="#two">two</a></li>
+                <li id="three-dot" onclick="dotstyleNav(this)"><a href="#three">three</a></li>
+                <li id="four-dot" onclick="dotstyleNav(this)"><a href="#four">four</a></li>
+                <li id="five-dot" onclick="dotstyleNav(this)"><a href="#five">five</a></li>
             </ul>
-
         </div>
-
     </div>
 
     <header>
@@ -82,20 +70,19 @@
         <nav class="navbar">
 
             <a href="/"><ul class="home">
-
                 <li><img src="/assets/img/wasd-logo.png" height="60px"></li>
-
             </ul></a>
 
             <ul class="nav-links">
 
                 <a href="/about/"><li>cd about</li></a>
 
+                <a href="/cv/"><li>cd cv</li></a>
+
                 <a href="/projects/"><li class="dropdown">
                     cd projects
                     <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
                         <a href="/projects/research"><li class="dropdown_item-1">research</li></a>
-                        <a href="/projects/coding"><li class="dropdown_item-2">coding</li></a>
                         <a href="/projects/design"><li class="dropdown_item-3">design</li></a>
                     </ul>
                 </li></a>
@@ -103,8 +90,14 @@
             </ul>
 
         </nav>
-        
-        <style>.home:after { content:'research'; }</style>
+
+        <style>
+            .home:after { content:'research'; }
+            #wrapper-scroll { width: 500vw; }
+            @media (max-width: 900px) {
+                #wrapper-scroll { height: 500vh; width: 100vw; }
+            }
+        </style>
 
     </header>
 
@@ -112,9 +105,79 @@
 
         <div class="wrapper-scroll" id="wrapper-scroll">
 
+            <!-- slide 1: TL-Prot -->
             <div class="slide one">
 
                 <div class="container-box-scroll one" id="one">
+
+                    <div class="container-box-text-scroll">
+                        <span class="background-text">TL-Prot
+                            <br><br>
+                            <strong>the problem:</strong> protein abundance is shaped by a complex interplay of
+                            transcription, post-transcriptional control, and translation efficiency — factors
+                            that are difficult to learn from scratch with limited labeled data. mRNA levels
+                            alone are a weak proxy for protein output.
+                            <br><br>
+                            <strong>what i built:</strong> TL-Prot fine-tunes Enformer — a state-of-the-art
+                            pretrained genomic foundation model trained on vast regulatory genomics data — as
+                            a backbone for protein abundance prediction. rather than training from scratch,
+                            it leverages Enformer's learned representations of DNA regulatory context to
+                            bootstrap the prediction task.
+                            <br><br>
+                            <strong>what i found:</strong> [quantitative results in progress — will update]
+                            <br><br>
+                            <strong>why it matters:</strong> a central open question in computational biology
+                            is whether pretrained genomic FMs can generalize beyond their original training
+                            tasks. TL-Prot is a concrete test of that — using a sequence-to-function model
+                            trained on chromatin and expression signals to predict a related but distinct
+                            molecular phenotype.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- slide 2: DiploZoi -->
+            <div class="slide two">
+
+                <div class="container-box-scroll two" id="two">
+
+                    <div class="container-box-text-scroll">
+                        <span class="background-text">DiploZoi
+                            <br><br>
+                            <strong>the problem:</strong> most genomic models operate on haploid reference
+                            sequences, ignoring the personal genome variation that drives differences in gene
+                            regulation between individuals. for these models to be clinically useful, they
+                            need to handle diploid, patient-specific inputs.
+                            <br><br>
+                            <strong>what i built:</strong> DiploZoi takes diploid personal genome sequences
+                            as input and predicts patient-specific gene expression patterns. it's built on
+                            a frozen Borzoi trunk — preserving the pretrained FM representations intact —
+                            with a trainable prediction head adapted for the personalized task.
+                            <br><br>
+                            <strong>what i found:</strong> a per-bin cross-patient Pearson correlation showed
+                            DiploZoi substantially improves per-patient coverage shape accuracy over base
+                            Borzoi (r&nbsp;≈&nbsp;0.86 vs r&nbsp;≈&nbsp;0.63). however, neither model
+                            showed strong genotype-driven personalization at the per-bin level — suggesting
+                            the gain is mostly tissue-level calibration rather than individual variant effects.
+                            <br><br>
+                            <strong>why it matters:</strong> fine-tuning on a small patient cohort doesn't
+                            necessarily add personalization signal — it may just recalibrate scale. DiploZoi
+                            gives a controlled test of this: the pretrained representations dominate, and
+                            fine-tuning adds calibration rather than genotype sensitivity. that's a useful
+                            finding for how the field should think about deploying these models clinically.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- slide 3: MPS I & II -->
+            <div class="slide three">
+
+                <div class="container-box-scroll three" id="three">
 
                     <div class="container-box-lb-image">
 
@@ -131,18 +194,21 @@
                     </div>
 
                     <div class="container-box-lb-text">
-                        <span class="background-text">MPS I & II
+                        <span class="background-text">MPS I &amp; II
                             <br><br>
-                            at PerkinElmer Genomics, i developed semi-quantitative assays to detect the 
-                            presence of analytes (found to only be present in individuals with MPS I & II) from dried blood spots 
-                            using LC-MS/MS, which can be run simultaneously as a panel. these markers are virtually undetectable within 
-                            the normal population, yielding a larger minimum differential factor and higher confidence in results 
-                            compared to traditional tests for MPS. in addition, the tests also allowed for differentiation of psedodeficient 
-                            allele variants from pathogenic variants, reducing the number of false positives commonly seen in MPS I testing.
+                            at PerkinElmer Genomics, i developed semi-quantitative assays to detect the
+                            presence of analytes (found to only be present in individuals with MPS I &amp; II)
+                            from dried blood spots using LC-MS/MS, which can be run simultaneously as a panel.
+                            these markers are virtually undetectable within the normal population, yielding a
+                            larger minimum differential factor and higher confidence in results compared to
+                            traditional tests for MPS. in addition, the tests also allowed for differentiation
+                            of pseudodeficient allele variants from pathogenic variants, reducing the number
+                            of false positives commonly seen in MPS I testing.
                             <br><br>
-                            we then began to investigate trends between variant types and MPS marker concentrations, specifically for MPS I, as 
-                            we believe it could prove clincally useful in understanding variants of unknown significance, which currently 
-                            yield ambiguity in predicting clinical status.
+                            we then began to investigate trends between variant types and MPS marker
+                            concentrations, specifically for MPS I, as we believe it could prove clinically
+                            useful in understanding variants of unknown significance, which currently yield
+                            ambiguity in predicting clinical status.
                         </span>
                     </div>
 
@@ -150,9 +216,10 @@
 
             </div>
 
-            <div class="slide two">
+            <!-- slide 4: Pompe CRIM-status -->
+            <div class="slide four">
 
-                <div class="container-box-scroll two" id="two">
+                <div class="container-box-scroll four" id="four">
 
                     <div class="container-box-lb-image">
 
@@ -165,19 +232,22 @@
                     <div class="container-box-text-scroll">
                         <span class="background-text">pompe CRIM-status determination
                             <br><br>
-                            at PerkinElmer Genomics, i developed a qualitative assay to detect the presence of 
-                            endogenous acid α-glucosidase (GAA) within human peripheral blood mononuclear cells (PBMCs) isolated from 
-                            whole blood using Western blotting. the assay allows for rapid CRIM-status determination in patients with 
-                            Pompe disease in order to more quickly initiate immune tolerance induction.</span>
+                            at PerkinElmer Genomics, i developed a qualitative assay to detect the presence of
+                            endogenous acid α-glucosidase (GAA) within human peripheral blood mononuclear cells
+                            (PBMCs) isolated from whole blood using Western blotting. the assay allows for rapid
+                            CRIM-status determination in patients with Pompe disease in order to more quickly
+                            initiate immune tolerance induction.
+                        </span>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="slide three">
+            <!-- slide 5: KDM6B -->
+            <div class="slide five">
 
-                <div class="container-box-scroll three" id="three">
+                <div class="container-box-scroll five" id="five">
 
                     <div class="container-box-lb-image">
 
@@ -196,15 +266,16 @@
                     <div class="container-box-text-scroll">
                         <span class="background-text">kdm6b 'bump-and-hole' research
                             <br><br>
-                            as an undergraduate at the University of Pittsburgh, i  utilized the ‘bump-and-hole’ method 
-                            to develop variants of KDM6B with ‘hole-modified’ active sites which were sensitive to selective inhibition by α-ketoglutarate 
-                            engineered with complementary steric ‘bumps’ to help elucidate KDM6B's specific epigenetic function.
+                            as an undergraduate at the University of Pittsburgh, i utilized the 'bump-and-hole'
+                            method to develop variants of KDM6B with 'hole-modified' active sites which were
+                            sensitive to selective inhibition by α-ketoglutarate engineered with complementary
+                            steric 'bumps' to help elucidate KDM6B's specific epigenetic function.
+                        </span>
                     </div>
 
                 </div>
 
             </div>
-
 
         </div>
 
@@ -213,30 +284,25 @@
     <footer class="footer">
 
         <div class="footer__inner">
-
             <div class="footer__content">
                 © <span id="date_">  </span> |
                 <a href="" style="font-weight: bold;" target="_blank">
                     sashachernenkoff.com
                 </a>
             </div>
-            
         </div>
 
         <div class="footer__inner">
-
             <div class="footer__content">
                 <span>powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">
                     sasha
                 </a></span>
             </div>
-
         </div>
 
     </footer>
 
     <!-- Optional JavaScript -->
-    <!-- Popper.js first, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -249,15 +315,15 @@
     <script>
 
         window.addEventListener('wheel', function() {
-            setTimeout(() => {  scrollTrigger(); }, 150);
+            setTimeout(() => { scrollTrigger(); }, 150);
         });
 
         window.addEventListener('scroll', function() {
-            setTimeout(() => {  scrollTrigger(); }, 150);
+            setTimeout(() => { scrollTrigger(); }, 150);
         });
 
         window.addEventListener('scrollEnd', function() {
-            setTimeout(() => {  scrollTrigger(); }, 150);
+            setTimeout(() => { scrollTrigger(); }, 150);
         });
 
     </script>

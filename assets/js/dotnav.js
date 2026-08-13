@@ -13,20 +13,16 @@ function dotstyleNav(clickedDot) {
 }
 
 function scrollTrigger() {
-    console.log('In scrollTriger()!');
-
-    var marinade_pos = document.getElementById('one');
-    var freak_pos = document.getElementById('two');
-    var nm_pos = document.getElementById('three');
-
-    if (checkVisible(marinade_pos)) {
-        dotstyleNav(document.getElementById("one-dot"));   
-    }
-    else if (checkVisible(freak_pos)) {
-        dotstyleNav(document.getElementById("two-dot"));
-    }
-    else if (checkVisible(nm_pos)) {
-        dotstyleNav(document.getElementById("three-dot"));
+    var slideIds = ['one', 'two', 'three', 'four', 'five'];
+    for (var i = 0; i < slideIds.length; i++) {
+        var el = document.getElementById(slideIds[i]);
+        if (!el) continue;
+        var dotEl = document.getElementById(slideIds[i] + '-dot');
+        if (!dotEl) continue;
+        if (checkVisible(el)) {
+            dotstyleNav(dotEl);
+            break;
+        }
     }
 }
 
