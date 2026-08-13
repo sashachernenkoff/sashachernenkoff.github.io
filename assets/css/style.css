@@ -129,6 +129,23 @@ a:hover {
 .dropdown_menu li:before {
   display: none; /* sweep handled by background-gradient on the li instead */
 }
+.nav-links li.dropdown:before {
+  display: none; /* sweep handled by background-gradient below */
+}
+.nav-links li.dropdown {
+  background-image:
+    linear-gradient(to right, white 50%, #44423f 50%),
+    linear-gradient(to right, #44423f 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease-out;
+}
+.nav-links li.dropdown:hover {
+  background-position: 0% 0;
+}
 .dropdown {
   padding: 3px 20px;
   display: flex;
