@@ -10,7 +10,7 @@ var windowSize = {
 var randomWidth = () => {
     let x = 0;
     if (detectMob()) {
-        x = getRndInteger(60,85);
+        x = getRndInteger(60,81);
         document.querySelector(".container-box-home").style.width = x + "%";
         document.querySelector(".container-box-home").setAttribute("data-value", x+ "%");
 

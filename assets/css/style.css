@@ -336,7 +336,7 @@ a:hover {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .container-box {
   -webkit-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
@@ -347,7 +347,7 @@ a:hover {
   background-color: white;
   justify-self: center;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 65%;
   padding: 30px;
   text-align: center;
