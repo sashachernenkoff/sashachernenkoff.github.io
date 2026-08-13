@@ -174,6 +174,7 @@ a:hover {
 .dropdown_menu li {
   display: none;
   color: white;
+  -webkit-text-fill-color: white;
   background-color: #44423f;
   background-image: linear-gradient(to right, #5b6a99 50%, #44423f 50%);
   background-size: 200% 100%;
