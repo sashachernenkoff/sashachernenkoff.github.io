@@ -336,7 +336,7 @@ a:hover {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .container-box {
   -webkit-box-shadow: 6px 6px 22px -1px rgba(128, 128, 128, 0.81);
@@ -353,7 +353,7 @@ a:hover {
   text-align: center;
   font-size: small;
   margin: 20px 0;
-  max-height: calc(100vh - 160px);
+  max-height: calc(100vh - 240px);
   overflow-y: auto;
 }
 .container-box-text {
