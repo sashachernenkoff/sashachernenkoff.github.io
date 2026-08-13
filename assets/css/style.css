@@ -31,7 +31,7 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: #98756b;
+  color: #5b6a99;
 }
 a:hover {
   color: #6e7fc4;
@@ -142,7 +142,7 @@ a:hover {
   z-index: 100;
 }
 .dropdown:hover {
-  cursor: pointer;
+  cursor: default;
 }
 .dropdown:hover .dropdown_menu li {
   display: block;
