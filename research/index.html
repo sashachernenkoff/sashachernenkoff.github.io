@@ -24,15 +24,15 @@
 <meta property="og:title" content="sasha chernenkoff"/>
 <meta property="og:url" content=""/>
 <meta property="og:type" content="website"/>
-<meta property="og:description" content="bioinformatics research — genomic foundation models, gene expression, newborn screening"/>
+<meta property="og:description" content="bioinformatics research - genomic foundation models, gene expression, newborn screening"/>
 <meta itemprop="name" content="sasha chernenkoff"/>
 <meta itemprop="url" content=""/>
 <meta itemprop="description" content="sasha chernenkoff's research"/>
 <meta name="twitter:title" content="sasha chernenkoff"/>
 <meta name="twitter:url" content=""/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="sasha chernenkoff — bioinformatics research"/>
-<meta name="Description" content="bioinformatics research — genomic foundation models">
+<meta name="twitter:description" content="sasha chernenkoff - bioinformatics research"/>
+<meta name="Description" content="bioinformatics research - genomic foundation models">
 <meta name="author" content="sasha chernenkoff">
 <meta name="keywords" content="sasha chernenkoff, bioinformatics, genomics, machine learning, foundation models">
 
@@ -118,21 +118,21 @@
                         <span class="background-text">TL-Prot
                             <br><br>
                             <strong>the problem:</strong> protein abundance is shaped by a complex interplay of
-                            transcription, post-transcriptional control, and translation efficiency — factors
+                            transcription, post-transcriptional control, and translation efficiency - factors
                             that are difficult to learn from scratch with limited labeled data. mRNA levels
                             alone are a weak proxy for protein output.
                             <br><br>
-                            <strong>what i built:</strong> TL-Prot fine-tunes Enformer — a state-of-the-art
-                            pretrained genomic foundation model trained on vast regulatory genomics data — as
+                            <strong>what i built:</strong> TL-Prot fine-tunes Enformer - a state-of-the-art
+                            pretrained genomic foundation model trained on vast regulatory genomics data - as
                             a backbone for protein abundance prediction. rather than training from scratch,
                             it leverages Enformer's learned representations of DNA regulatory context to
                             bootstrap the prediction task.
                             <br><br>
-                            <strong>what i found:</strong> [quantitative results in progress — will update]
+                            <strong>what i found:</strong> [quantitative results in progress - will update]
                             <br><br>
                             <strong>why it matters:</strong> a central open question in computational biology
                             is whether pretrained genomic FMs can generalize beyond their original training
-                            tasks. TL-Prot is a concrete test of that — using a sequence-to-function model
+                            tasks. TL-Prot is a concrete test of that - using a sequence-to-function model
                             trained on chromatin and expression signals to predict a related but distinct
                             molecular phenotype.
                         </span>
@@ -157,17 +157,17 @@
                             <br><br>
                             <strong>what i built:</strong> DiploZoi takes diploid personal genome sequences
                             as input and predicts patient-specific gene expression patterns. it's built on
-                            a frozen Borzoi trunk — preserving the pretrained FM representations intact —
+                            a frozen Borzoi trunk - preserving the pretrained FM representations intact -
                             with a trainable prediction head adapted for the personalized task.
                             <br><br>
                             <strong>what i found:</strong> a per-bin cross-patient Pearson correlation showed
                             DiploZoi substantially improves per-patient coverage shape accuracy over base
                             Borzoi (r&nbsp;≈&nbsp;0.86 vs r&nbsp;≈&nbsp;0.63). however, neither model
-                            showed strong genotype-driven personalization at the per-bin level — suggesting
+                            showed strong genotype-driven personalization at the per-bin level - suggesting
                             the gain is mostly tissue-level calibration rather than individual variant effects.
                             <br><br>
                             <strong>why it matters:</strong> fine-tuning on a small patient cohort doesn't
-                            necessarily add personalization signal — it may just recalibrate scale. DiploZoi
+                            necessarily add personalization signal - it may just recalibrate scale. DiploZoi
                             gives a controlled test of this: the pretrained representations dominate, and
                             fine-tuning adds calibration rather than genotype sensitivity. that's a useful
                             finding for how the field should think about deploying these models clinically.
