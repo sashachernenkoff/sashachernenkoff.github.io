@@ -12,7 +12,7 @@
 }
 body {
   font-family: 'GT Walsheim Pro', 'Poppins', Verdana, sans-serif;
-  transition: background-color 0.5s, color 0.5s;
+  transition: all 1s;
   color:#44423f;
   background-color: #f9f2ec;
   -webkit-user-select: auto;
@@ -262,7 +262,7 @@ a:hover {
   background-image: url('../img/lined-paper.png');
   background-size: cover;
   background-color: white;
-  transition: width 0.15s ease-out, box-shadow 0.5s;
+  transition: width 1s;
   margin: 14% auto;
   padding: 30px;  
   text-align: center;
