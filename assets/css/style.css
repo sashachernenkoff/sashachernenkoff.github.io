@@ -126,8 +126,8 @@ a:hover {
 .dropdown_menu li:hover .navlinks a {
   color: white!important;
 }
-.dropdown_menu li:before { /* dropdown sweep color */
-  background: #5b6a99;
+.dropdown_menu li:before {
+  display: none; /* sweep handled by background-gradient on the li instead */
 }
 .dropdown {
   padding: 3px 20px;
@@ -158,14 +158,18 @@ a:hover {
   display: none;
   color: white;
   background-color: #44423f;
+  background-image: linear-gradient(to right, #5b6a99 50%, #44423f 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
   font-size: small;
   opacity: 0;
   margin: 0 20px;
   padding: 3px 20px;
   width: 120px;
+  transition: color 0.05s ease, background-position 0.5s ease-out;
 }
 .dropdown_menu li:hover {
-  background-color: #44423f;
+  background-position: 0% 0;
 }
 .dropdown:hover .dropdown_menu--animated {
   display: block;
