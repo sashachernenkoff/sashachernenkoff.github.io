@@ -71,8 +71,29 @@
 
             </ul>
 
+            <button class="hamburger" aria-label="open navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+
         </nav>
-            
+
+        <div class="mobile-drawer">
+            <div class="mobile-drawer-header">
+                <a href="/"><img src="/assets/img/wasd-logo.png" height="45px" alt="sasha chernenkoff"></a>
+            </div>
+            <ul class="mobile-drawer-links">
+                <li><a href="/about/">about</a></li>
+                <li><a href="/cv/">cv</a></li>
+                <li><a href="/research/">research</a></li>
+                <li><a href="/design/">design</a></li>
+            </ul>
+            <div class="mobile-drawer-footer-text">
+                &copy; <span class="footer-year"></span> sashachernenkoff.com<br>
+                powered by <a href="https://github.com/sashachernenkoff" target="_blank">sasha</a>
+            </div>
+        </div>
+        <div class="mobile-overlay"></div>
+
         <style>.home:after { visibility:hidden; }</style>
 
     </header>
@@ -180,6 +201,7 @@
     <script src="inc/bootstrap5/js/bootstrap.min.js"></script>
     <script src="inc/fontawesome5/js/all.min.js"></script>
     <script src="assets/js/resize.js"></script>
+    <script src="assets/js/drawer.js"></script>
 
 </body>
 
