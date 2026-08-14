@@ -367,11 +367,16 @@ a:hover {
 .container-box-image {
   padding: 30px 50px;
   flex: 0 1 45%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .about-image {
   border-radius: 50%;
   box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
-  margin-bottom: 15%;
+  margin-bottom: 15px;
   width: 100%;
   max-width: 250px;
   height: auto;
