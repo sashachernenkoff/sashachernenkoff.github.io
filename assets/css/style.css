@@ -786,12 +786,27 @@ a:hover {
   /* nav bar */
 
   .navbar {
-    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 5px 0 8px;
+    justify-content: center;
+  }
+  .navbar > a {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .home {
+    justify-content: center;
   }
   .home li {
     margin: 0 10px;
     padding: 3px 10px;
     flex: 1 0 70px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
   }
   .nav-links li {
     margin: 0 10px;
@@ -855,9 +870,10 @@ a:hover {
 
   .wrapper {
     flex-direction: column;
+    top: 115px;
   }
   .container-box {
-    max-height: calc(100vh - 160px);
+    max-height: calc(100vh - 200px);
     overflow-y: auto;
     width: 80%;
     flex-direction: column;
@@ -988,8 +1004,8 @@ a:hover {
 
   /* footer */
   .footer {
-    background-color: #44423f;
-    color: #f9f2ec;
+    background-color: #f9f2ec;
+    color: #44423f;
     font-size: xx-small;
     height: 30px;
     padding-top: 3px;
