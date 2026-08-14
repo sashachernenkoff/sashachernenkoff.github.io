@@ -809,6 +809,10 @@ a:hover {
     height: 38px;
   }
   .hamburger {
+    position: fixed;
+    top: 24px;
+    left: 12px;
+    z-index: 10001;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -817,7 +821,17 @@ a:hover {
     border: none;
     cursor: pointer;
     padding: 8px;
-    order: -1;
+  }
+  .hamburger::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    background: rgba(249, 242, 236, 0);
+    transition: background 0.35s ease;
+  }
+  .hamburger.open::before {
+    background: rgba(249, 242, 236, 0.18);
   }
   .hamburger span {
     display: block;
@@ -826,6 +840,7 @@ a:hover {
     background-color: #44423f;
     transform-origin: center;
     transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.3s ease;
+    position: relative;
   }
   .hamburger.open span:nth-child(1) {
     transform: translateY(7px) rotate(405deg);
@@ -849,17 +864,16 @@ a:hover {
     width: 70%;
     height: 100vh;
     background-color: #333333;
-    z-index: 8500;
+    z-index: 10000;
     transition: left 0.3s ease;
     box-shadow: 4px 0 20px rgba(0,0,0,0.35);
-    padding-top: 80px;
   }
   .mobile-drawer.open {
     left: 0;
   }
   .mobile-drawer-links {
     list-style: none;
-    padding: 0;
+    padding: 70px 0 0;
     margin: 0;
     flex: 1;
   }
@@ -896,7 +910,7 @@ a:hover {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.35);
-    z-index: 8000;
+    z-index: 9950;
   }
   .mobile-overlay.open {
     display: block;
