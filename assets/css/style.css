@@ -851,6 +851,9 @@ a:hover {
   .hamburger.open span:nth-child(3) {
     transform: translateY(-7px) rotate(-405deg);
   }
+  .hamburger.open span {
+    background-color: #111111;
+  }
 
   /* drawer */
 
@@ -862,6 +865,7 @@ a:hover {
     left: calc(-70% - 25px);
     width: 70%;
     height: 100vh;
+    height: 100dvh;
     background-color: #333333;
     z-index: 10000;
     transition: left 0.3s ease;
@@ -889,7 +893,7 @@ a:hover {
     color: #a0b4d8;
   }
   .mobile-drawer-footer-text {
-    padding: 20px 30px;
+    padding: 20px 30px calc(20px + env(safe-area-inset-bottom, 20px));
     font-size: xx-small;
     color: rgba(255,255,255,0.3);
     border-top: 1px solid rgba(255,255,255,0.1);
