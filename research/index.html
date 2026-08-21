@@ -18,23 +18,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <title>sasha chernenkoff</title>
+    <title>Sasha Chernenkoff</title>
 
-<meta property="og:site_name" content="sasha chernenkoff"/>
-<meta property="og:title" content="sasha chernenkoff"/>
+<meta property="og:site_name" content="Sasha Chernenkoff"/>
+<meta property="og:title" content="Sasha Chernenkoff"/>
 <meta property="og:url" content=""/>
 <meta property="og:type" content="website"/>
-<meta property="og:description" content="bioinformatics research - genomic foundation models, gene expression, newborn screening"/>
-<meta itemprop="name" content="sasha chernenkoff"/>
+<meta property="og:description" content="Bioinformatics research - genomic foundation models, gene expression, newborn screening"/>
+<meta itemprop="name" content="Sasha Chernenkoff"/>
 <meta itemprop="url" content=""/>
-<meta itemprop="description" content="sasha chernenkoff's research"/>
-<meta name="twitter:title" content="sasha chernenkoff"/>
+<meta itemprop="description" content="Sasha Chernenkoff's research"/>
+<meta name="twitter:title" content="Sasha Chernenkoff"/>
 <meta name="twitter:url" content=""/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="sasha chernenkoff - bioinformatics research"/>
-<meta name="Description" content="bioinformatics research - genomic foundation models">
-<meta name="author" content="sasha chernenkoff">
-<meta name="keywords" content="sasha chernenkoff, bioinformatics, genomics, machine learning, foundation models">
+<meta name="twitter:description" content="Sasha Chernenkoff - bioinformatics research"/>
+<meta name="Description" content="Bioinformatics research - genomic foundation models">
+<meta name="author" content="Sasha Chernenkoff">
+<meta name="keywords" content="Sasha Chernenkoff, bioinformatics, genomics, machine learning, foundation models">
 
 </head>
 
@@ -61,6 +61,7 @@
                 <li id="three-dot" onclick="dotstyleNav(this)"><a href="#three">three</a></li>
                 <li id="four-dot" onclick="dotstyleNav(this)"><a href="#four">four</a></li>
                 <li id="five-dot" onclick="dotstyleNav(this)"><a href="#five">five</a></li>
+                <li id="six-dot" onclick="dotstyleNav(this)"><a href="#six">six</a></li>
             </ul>
         </div>
     </div>
@@ -108,16 +109,16 @@
             </ul>
             <div class="mobile-drawer-footer-text">
                 &copy; <span class="footer-year"></span> sashachernenkoff.com<br>
-                powered by <a href="https://github.com/sashachernenkoff" target="_blank">sasha</a>
+                powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
             </div>
         </div>
         <div class="mobile-overlay"></div>
 
         <style>
             .home:after { content:'research'; }
-            #wrapper-scroll { width: 500vw; }
+            #wrapper-scroll { width: 600vw; }
             @media (max-width: 900px) {
-                #wrapper-scroll { height: 500vh; width: 100vw; }
+                #wrapper-scroll { height: 600vh; width: 100vw; }
             }
         </style>
 
@@ -133,26 +134,25 @@
                 <div class="container-box-scroll one" id="one">
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text">TL-Prot
+                        <span class="background-text"><span class="slide-title">Fine-tuning genomic foundation models for protein abundance prediction</span>
+                            <span class="slide-subtitle">University of Calgary MSc Thesis Project</span>
                             <br><br>
-                            <strong>the problem:</strong> protein abundance is shaped by a complex interplay of
-                            transcription, post-transcriptional control, and translation efficiency - factors
-                            that are difficult to learn from scratch with limited labeled data. mRNA levels
-                            alone are a weak proxy for protein output.
+                            Protein abundance is shaped by a complex interaction between transcription,
+                            post-transcriptional control, translation efficiency, and post-translational control.
+                            These factors are difficult to learn from limited labeled data, since mRNA levels
+                            alone are a weak proxy for protein output. This project fine-tunes a pretrained genomic
+                            foundation model trained on large-scale regulatory genomics data as a foundation
+                            for protein abundance prediction. Rather than training from scratch, it leverages
+                            learned representations of DNA regulatory context to test whether
+                            pretrained sequence-to-function models can generalize beyond their original
+                            training tasks to a distinct molecular phenotype.
                             <br><br>
-                            <strong>what i built:</strong> TL-Prot fine-tunes Enformer - a state-of-the-art
-                            pretrained genomic foundation model trained on vast regulatory genomics data - as
-                            a backbone for protein abundance prediction. rather than training from scratch,
-                            it leverages Enformer's learned representations of DNA regulatory context to
-                            bootstrap the prediction task.
-                            <br><br>
-                            <strong>what i found:</strong> [quantitative results in progress - will update]
-                            <br><br>
-                            <strong>why it matters:</strong> a central open question in computational biology
-                            is whether pretrained genomic FMs can generalize beyond their original training
-                            tasks. TL-Prot is a concrete test of that - using a sequence-to-function model
-                            trained on chromatin and expression signals to predict a related but distinct
-                            molecular phenotype.
+                            <span class="tag-list">
+                                <span class="tag">Genomic Foundation Models</span>
+                                <span class="tag">Transfer Learning</span>
+                                <span class="tag">Proteomics</span>
+                                <span class="tag">Regulatory Genomics</span>
+                            </span>
                         </span>
                     </div>
 
@@ -166,29 +166,25 @@
                 <div class="container-box-scroll two" id="two">
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text">DiploZoi
+                        <span class="background-text"><span class="slide-title">Diploid, patient-specific gene expression modelling</span>
+                            <span class="slide-subtitle">University of Calgary Research Project</span>
                             <br><br>
-                            <strong>the problem:</strong> most genomic models operate on haploid reference
-                            sequences, ignoring the personal genome variation that drives differences in gene
-                            regulation between individuals. for these models to be clinically useful, they
-                            need to handle diploid, patient-specific inputs.
+                            Most genomic sequence-to-function models operate on haploid reference sequences. This
+                            makes them poor predictors of real patient regulatory variation. They fail to capture
+                            cis-epistasis: the non-additive compounding effect of multiple regulatory variants
+                            interacting on the same haplotype. This is a limitation for models intended for clinical use.
+                            This projects uses diploid, patient-specific genome sequences to predict personalized
+                            gene expression coverage. It finetunes the trunk of a genomic foundation model and trains
+                            a new prediction head. The project investigates how much of the model's improvement on
+                            personalized data reflects genuine genotype-driven signal rather than simply learning a
+                            new data distribution.
                             <br><br>
-                            <strong>what i built:</strong> DiploZoi takes diploid personal genome sequences
-                            as input and predicts patient-specific gene expression patterns. it's built on
-                            a frozen Borzoi trunk - preserving the pretrained FM representations intact -
-                            with a trainable prediction head adapted for the personalized task.
-                            <br><br>
-                            <strong>what i found:</strong> a per-bin cross-patient Pearson correlation showed
-                            DiploZoi substantially improves per-patient coverage shape accuracy over base
-                            Borzoi (r&nbsp;≈&nbsp;0.86 vs r&nbsp;≈&nbsp;0.63). however, neither model
-                            showed strong genotype-driven personalization at the per-bin level - suggesting
-                            the gain is mostly tissue-level calibration rather than individual variant effects.
-                            <br><br>
-                            <strong>why it matters:</strong> fine-tuning on a small patient cohort doesn't
-                            necessarily add personalization signal - it may just recalibrate scale. DiploZoi
-                            gives a controlled test of this: the pretrained representations dominate, and
-                            fine-tuning adds calibration rather than genotype sensitivity. that's a useful
-                            finding for how the field should think about deploying these models clinically.
+                            <span class="tag-list">
+                                <span class="tag">Genomic Foundation Models</span>
+                                <span class="tag">Diploid Modelling</span>
+                                <span class="tag">Personalized Genomics</span>
+                                <span class="tag">Gene Expression Prediction</span>
+                            </span>
                         </span>
                     </div>
 
@@ -196,10 +192,43 @@
 
             </div>
 
-            <!-- slide 3: MPS I & II -->
+            <!-- slide 3: VAE heritability -->
             <div class="slide three">
 
                 <div class="container-box-scroll three" id="three">
+
+                    <div class="container-box-text-scroll">
+                        <span class="background-text"><span class="slide-title">VAE-Based Heritability Estimation from Genotype Data</span>
+                            <span class="slide-subtitle">University of Calgary Research Project</span>
+                            <br><br>
+                            Standard heritability estimation methods, such as GCTA-GREML, rely on genetic
+                            relationship matrices (GRMs) built directly from genotype data or from linear
+                            dimensionality-reduction techniques like PCA, which may not fully capture nonlinear
+                            structure in high-dimensional genomic data. This project explores variational
+                            autoencoders (VAEs) as an alternative, nonlinear approach to genotype
+                            dimensionality reduction, learning latent representations of genotype data across
+                            multiple disease and cohort datasets. GRMs constructed from these VAE-derived
+                            latent representations are used to estimate SNP-based heritability via a GREML
+                            framework, with the goal of comparing this deep-learning-based approach against
+                            conventional PCA-based heritability estimation.
+                            <br><br>
+                            <span class="tag-list">
+                                <span class="tag">Variational Autoencoders</span>
+                                <span class="tag">Statistical Genetics</span>
+                                <span class="tag">Heritability Estimation</span>
+                                <span class="tag">GWAS Deep Learning</span>
+                            </span>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- slide 4: MPS I & II -->
+            <div class="slide four">
+
+                <div class="container-box-scroll four" id="four">
 
                     <div class="container-box-lb-image">
 
@@ -216,21 +245,29 @@
                     </div>
 
                     <div class="container-box-lb-text">
-                        <span class="background-text">MPS I &amp; II
+                        <span class="background-text"><span class="slide-title">MPS I &amp; II</span>
+                            <span class="slide-subtitle">PerkinElmer Genomics</span>
                             <br><br>
-                            at PerkinElmer Genomics, i developed semi-quantitative assays to detect the
+                            At PerkinElmer Genomics, I developed semi-quantitative assays to detect the
                             presence of analytes (found to only be present in individuals with MPS I &amp; II)
                             from dried blood spots using LC-MS/MS, which can be run simultaneously as a panel.
-                            these markers are virtually undetectable within the normal population, yielding a
+                            These markers are virtually undetectable within the normal population, yielding a
                             larger minimum differential factor and higher confidence in results compared to
-                            traditional tests for MPS. in addition, the tests also allowed for differentiation
+                            traditional tests for MPS. In addition, the tests also allowed for differentiation
                             of pseudodeficient allele variants from pathogenic variants, reducing the number
                             of false positives commonly seen in MPS I testing.
                             <br><br>
-                            we then began to investigate trends between variant types and MPS marker
+                            We then began to investigate trends between variant types and MPS marker
                             concentrations, specifically for MPS I, as we believe it could prove clinically
                             useful in understanding variants of unknown significance, which currently yield
                             ambiguity in predicting clinical status.
+                            <br><br>
+                            <span class="tag-list">
+                                <span class="tag">Newborn Screening</span>
+                                <span class="tag">LC-MS/MS</span>
+                                <span class="tag">Biomarker Discovery</span>
+                                <span class="tag">Lysosomal Storage Disorders</span>
+                            </span>
                         </span>
                     </div>
 
@@ -238,10 +275,10 @@
 
             </div>
 
-            <!-- slide 4: Pompe CRIM-status -->
-            <div class="slide four">
+            <!-- slide 5: Pompe CRIM-status -->
+            <div class="slide five">
 
-                <div class="container-box-scroll four" id="four">
+                <div class="container-box-scroll five" id="five">
 
                     <div class="container-box-lb-image">
 
@@ -252,13 +289,21 @@
                     </div>
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text">pompe CRIM-status determination
+                        <span class="background-text"><span class="slide-title">Pompe CRIM-status determination</span>
+                            <span class="slide-subtitle">PerkinElmer Genomics</span>
                             <br><br>
-                            at PerkinElmer Genomics, i developed a qualitative assay to detect the presence of
+                            At PerkinElmer Genomics, I developed a qualitative assay to detect the presence of
                             endogenous acid α-glucosidase (GAA) within human peripheral blood mononuclear cells
-                            (PBMCs) isolated from whole blood using Western blotting. the assay allows for rapid
+                            (PBMCs) isolated from whole blood using Western blotting. The assay allows for rapid
                             CRIM-status determination in patients with Pompe disease in order to more quickly
                             initiate immune tolerance induction.
+                            <br><br>
+                            <span class="tag-list">
+                                <span class="tag">Western Blotting</span>
+                                <span class="tag">CRIM Status</span>
+                                <span class="tag">Pompe Disease</span>
+                                <span class="tag">Assay Development</span>
+                            </span>
                         </span>
                     </div>
 
@@ -266,10 +311,10 @@
 
             </div>
 
-            <!-- slide 5: KDM6B -->
-            <div class="slide five">
+            <!-- slide 6: KDM6B -->
+            <div class="slide six">
 
-                <div class="container-box-scroll five" id="five">
+                <div class="container-box-scroll six" id="six">
 
                     <div class="container-box-lb-image">
 
@@ -286,12 +331,20 @@
                     </div>
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text">kdm6b 'bump-and-hole' research
+                        <span class="background-text"><span class="slide-title">KDM6B 'bump-and-hole' research</span>
+                            <span class="slide-subtitle">University of Pittsburgh Undergraduate Research</span>
                             <br><br>
-                            as an undergraduate at the University of Pittsburgh, i utilized the 'bump-and-hole'
+                            As an undergraduate at the University of Pittsburgh, I utilized the 'bump-and-hole'
                             method to develop variants of KDM6B with 'hole-modified' active sites which were
                             sensitive to selective inhibition by α-ketoglutarate engineered with complementary
                             steric 'bumps' to help elucidate KDM6B's specific epigenetic function.
+                            <br><br>
+                            <span class="tag-list">
+                                <span class="tag">Protein Engineering</span>
+                                <span class="tag">Epigenetics</span>
+                                <span class="tag">Chemical Biology</span>
+                                <span class="tag">Enzyme Design</span>
+                            </span>
                         </span>
                     </div>
 
@@ -317,7 +370,7 @@
         <div class="footer__inner">
             <div class="footer__content">
                 <span>powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">
-                    sasha
+                    Sasha
                 </a></span>
             </div>
         </div>

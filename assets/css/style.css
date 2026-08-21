@@ -450,6 +450,36 @@ a:hover {
   flex: 1 1 500px;
   text-align: left;
 }
+.slide-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.35em;
+  color: #44423f;
+}
+.slide-subtitle {
+  display: block;
+  margin-top: 4px;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #7a6f66;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: #5b6a99;
+  background-color: #f9f2ec;
+  border: 1px solid #e0d5ca;
+  border-radius: 999px;
+  white-space: nowrap;
+}
 .container-box-image-scroll {
   box-shadow: 3px 3px 6px -1px rgba(148 148 148 / 80%);
   padding: 0px 0px;

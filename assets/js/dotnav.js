@@ -13,7 +13,7 @@ function dotstyleNav(clickedDot) {
 }
 
 function scrollTrigger() {
-    var slideIds = ['one', 'two', 'three', 'four', 'five'];
+    var slideIds = ['one', 'two', 'three', 'four', 'five', 'six'];
     for (var i = 0; i < slideIds.length; i++) {
         var el = document.getElementById(slideIds[i]);
         if (!el) continue;
