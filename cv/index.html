@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Poppins&display=swap" rel="stylesheet">
 
     <title>Sasha Chernenkoff - CV</title>
 
@@ -38,34 +38,19 @@
 
 </head>
 
-<body>
+<body class="page-cv">
 
     <header>
 
         <nav class="navbar">
 
-            <a href="/"><ul class="home">
-                <li><img src="/assets/img/wasd-logo.png" height="60px"></li>
-            </ul></a>
+            <a href="/" class="site-name">Sasha Chernenkoff</a>
 
             <ul class="nav-links">
-
-                <li class="dropdown">
-                    cd sasha
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/about/"><li class="dropdown_item-1">about</li></a>
-                        <a href="/cv/"><li class="dropdown_item-2">cv</li></a>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    cd projects
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/research/"><li class="dropdown_item-1">research</li></a>
-                        <a href="/design/"><li class="dropdown_item-3">design</li></a>
-                    </ul>
-                </li>
-
+                <li><a href="/intro/">Introduction</a></li>
+                <li><a href="/cv/" class="active">Curriculum Vitae</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
 
         </nav>
@@ -76,19 +61,16 @@
 
         <div class="mobile-drawer">
             <ul class="mobile-drawer-links">
-                <li><a href="/about/">about</a></li>
-                <li><a href="/cv/">cv</a></li>
-                <li><a href="/research/">research</a></li>
-                <li><a href="/design/">design</a></li>
+                <li><a href="/intro/">Introduction</a></li>
+                <li><a href="/cv/">Curriculum Vitae</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
             <div class="mobile-drawer-footer-text">
-                &copy; <span class="footer-year"></span> sashachernenkoff.com<br>
-                powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
+                &copy; <span class="footer-year"></span> | powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
             </div>
         </div>
         <div class="mobile-overlay"></div>
-
-        <style>.home:after { content:'cv'; }</style>
 
     </header>
 
@@ -103,7 +85,7 @@
                     <strong>Sasha Chernenkoff</strong>
                 </span>
                 <span class="background-text" style="display: block; margin-bottom: 4px;">
-                    <a href="mailto:sasha.chernenkoff@ucalgary.ca" style="color: #5b6a99;">sasha.chernenkoff@ucalgary.ca</a>
+                    <a href="mailto:sasha.chernenkoff@ucalgary.ca" style="color: #a8506e;">sasha.chernenkoff@ucalgary.ca</a>
                     &nbsp;&nbsp;·&nbsp;&nbsp;
                     <a href="https://github.com/sashachernenkoff" target="_blank">GitHub</a>
                     &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -113,7 +95,7 @@
                 </span>
 
                 <!-- education -->
-                <span class="background-text" style="display: block; border-top: 1px solid #d4c9bf; padding-top: 15px; margin-top: 18px;">
+                <span class="background-text" style="display: block; border-top: 1px solid #c9c3bc; padding-top: 15px; margin-top: 18px;">
                     <strong>Education</strong>
                 </span>
 
@@ -121,7 +103,7 @@
                     Master of Science, Specialization in Bioinformatics
                     &nbsp;&nbsp;·&nbsp;&nbsp; Cumming School of Medicine, University of Calgary, Canada
                     &nbsp;&nbsp;·&nbsp;&nbsp; <em>In progress</em><br>
-                    <span style="font-size: x-small; color: #7878a8;">
+                    <span style="font-size: 12px; color: #9c7280;">
                         GPA: 4.0/4.0<br>
                         Thesis: Transfer learning for tissue-specific prediction of protein abundance from DNA sequence<br>
                         Areas of interest: computational genomics, representation learning, gene and protein expression, statistical genetics
@@ -131,21 +113,20 @@
                 <span class="background-text" style="display: block; padding-top: 10px;">
                     Bachelor of Science, Honours in Chemistry
                     &nbsp;&nbsp;·&nbsp;&nbsp; Dietrich School of Arts and Sciences, University of Pittsburgh, USA<br>
-                    <span style="font-size: x-small; color: #7878a8;">
+                    <span style="font-size: 12px; color: #9c7280;">
                         GPA: 4.0/4.0<br>
                         Thesis: Selective inhibition of histone lysine demethylases using sterically modified inhibitors
                     </span>
                 </span>
 
                 <!-- experience -->
-                <span class="background-text" style="display: block; border-top: 1px solid #d4c9bf; padding-top: 15px; margin-top: 18px;">
+                <span class="background-text" style="display: block; border-top: 1px solid #c9c3bc; padding-top: 15px; margin-top: 18px;">
                     <strong>Experience</strong>
                 </span>
 
                 <span class="background-text" style="display: block; padding-top: 10px;">
-                    Research Associate &nbsp;&nbsp;·&nbsp;&nbsp; Department of Biochemistry and Molecular Biology,
-                    Cumming School of Medicine, University of Calgary, Canada<br>
-                    <span style="font-size: x-small; color: #7878a8;">
+                    Research Associate &nbsp;&nbsp;·&nbsp;&nbsp; University of Calgary, Canada<br>
+                    <span style="font-size: 12px; color: #9c7280;">
                         September 2023 - Present<br>
                         Applying transfer learning to pretrained genomic foundation models to predict tissue-specific
                         protein abundance and personalized gene expression directly from DNA sequence
@@ -154,7 +135,7 @@
 
                 <span class="background-text" style="display: block; padding-top: 10px;">
                     R&amp;D Scientist &nbsp;&nbsp;·&nbsp;&nbsp; PerkinElmer Genomics<br>
-                    <span style="font-size: x-small; color: #7878a8;">
+                    <span style="font-size: 12px; color: #9c7280;">
                         June 2020 - August 2023<br>
                         Developed second-tier biochemical diagnostic tests for newborn screening programs:
                         LC-MS/MS biomarker panel for MPS I &amp; II; Western blot CRIM-status assay for Pompe disease
@@ -162,9 +143,8 @@
                 </span>
 
                 <span class="background-text" style="display: block; padding-top: 10px;">
-                    Research Associate &nbsp;&nbsp;·&nbsp;&nbsp; Department of Chemistry, Dietrich School of Arts and Sciences,
-                    University of Pittsburgh, USA<br>
-                    <span style="font-size: x-small; color: #7878a8;">
+                    Research Associate &nbsp;&nbsp;·&nbsp;&nbsp; University of Pittsburgh, USA<br>
+                    <span style="font-size: 12px; color: #9c7280;">
                         September 2018 - June 2020<br>
                         Synthesized small-molecule inhibitors of enzymes involved in transcriptional regulation
                         and used mutagenesis to generate enzyme variants for evaluating inhibitor selectivity
@@ -173,17 +153,17 @@
                 </span>
 
                 <!-- publications -->
-                <span class="background-text" style="display: block; border-top: 1px solid #d4c9bf; padding-top: 15px; margin-top: 18px;">
+                <span class="background-text" style="display: block; border-top: 1px solid #c9c3bc; padding-top: 15px; margin-top: 18px;">
                     <strong>Publications</strong>
                 </span>
 
-                <span class="background-text" style="display: block; padding-top: 8px; font-size: small; line-height: 1.6em;">
+                <span class="background-text" style="display: block; padding-top: 8px; font-size: 14.5px; line-height: 1.6em;">
                     <u>Chernenkoff, S.</u>, Enoma, D., Weeraman, J. &amp; Long, Q.
                     Tissue-specific prediction of protein abundance via transfer learning.
                     <em>In preparation</em> (2026).
                 </span>
 
-                <span class="background-text" style="display: block; padding-top: 8px; font-size: small; line-height: 1.6em;">
+                <span class="background-text" style="display: block; padding-top: 8px; font-size: 14.5px; line-height: 1.6em;">
                     Kemogne, A., Weeraman, J., Wang, D., Enoma, D., Li, C., Sridharan, G.,
                     <u>Chernenkoff, S.</u>, Chekouo, T., Zhang, Q. &amp; Long, Q.
                     Genomic variational autoencoder enables stable representation learning in high-dimensional
@@ -191,7 +171,7 @@
                     <em>Under review</em> (2026).
                 </span>
 
-                <span class="background-text" style="display: block; padding-top: 8px; font-size: small; line-height: 1.6em;">
+                <span class="background-text" style="display: block; padding-top: 8px; font-size: 14.5px; line-height: 1.6em;">
                     Kuwik, J., Hinkelman, K., Waldman, M., Stepler, K. E., Wagner, S., Arora, S.,
                     <u>Chernenkoff, S.</u>, Cabalteja, C., Sidoli, S., Robinson, R. A. S. &amp; Islam, K.
                     Activity guided azide-methyllysine photo-trapping for substrate profiling of lysine demethylases.
@@ -203,7 +183,7 @@
                     <em>Abstracts</em>
                 </span>
 
-                <span class="background-text" style="display: block; padding-top: 8px; font-size: small; line-height: 1.6em;">
+                <span class="background-text" style="display: block; padding-top: 8px; font-size: 14.5px; line-height: 1.6em;">
                     Donti, T., Smith, S., <u>Chernenkoff, S.</u>, Ellgass, M. &amp; Hegde, M.
                     P012: Measuring non-reducing terminal glycosaminoglycan fragments increases specificity
                     and differentiates mucopolysaccharidosis type I (MPS I) from mucopolysaccharidosis
@@ -216,19 +196,19 @@
                     <em>Poster Presentations</em>
                 </span>
 
-                <span class="background-text" style="display: block; padding-top: 8px; font-size: small; line-height: 1.6em;">
+                <span class="background-text" style="display: block; padding-top: 8px; font-size: 14.5px; line-height: 1.6em;">
                     <u>Chernenkoff, S.</u>, Enoma, D., Weeraman, J. &amp; Long, Q.
                     TL-Prot: Tissue-specific prediction of protein abundance via transfer learning.
                     <em>ASHG Annual Meeting,</em> Montreal, QC (2026).
                 </span>
 
-                <span class="background-text" style="display: block; padding-top: 8px; font-size: small; line-height: 1.6em;">
+                <span class="background-text" style="display: block; padding-top: 8px; font-size: 14.5px; line-height: 1.6em;">
                     <u>Chernenkoff, S.</u>, Zhang, Q. &amp; Long, Q.
                     Variant annotation for low-prevalent disorders empowered by transfer-learning.
                     <em>ACHRI Research Retreat,</em> Banff, AB (2023).
                 </span>
 
-                <span class="background-text" style="display: block; padding-top: 8px; font-size: small; line-height: 1.6em;">
+                <span class="background-text" style="display: block; padding-top: 8px; font-size: 14.5px; line-height: 1.6em;">
                     Smith, S. E., Gelb, M. W., Herbst, Z. M., Dellagatta, J. N., <u>Chernenkoff, S.</u>,
                     Donti, T. &amp; Khaledi, H.
                     Measurement of non-reducing terminal glycosaminoglycan fragment increases specificity
@@ -237,32 +217,32 @@
                 </span>
 
                 <!-- awards -->
-                <span class="background-text" style="display: block; border-top: 1px solid #d4c9bf; padding-top: 15px; margin-top: 18px;">
+                <span class="background-text" style="display: block; border-top: 1px solid #c9c3bc; padding-top: 15px; margin-top: 18px;">
                     <strong>Awards &amp; Scholarships</strong>
                 </span>
 
                 <span class="background-text" style="display: block; padding-top: 10px;">
                     ACHRI Graduate Scholarship<br>
-                    <span style="font-size: x-small; color: #7878a8;">September 2026</span>
+                    <span style="font-size: 12px; color: #9c7280;">September 2026</span>
                 </span>
 
                 <span class="background-text" style="display: block; padding-top: 8px;">
                     Canada Graduate Scholarships - Master's Program (CIHR)<br>
-                    <span style="font-size: x-small; color: #7878a8;">April 2024</span>
+                    <span style="font-size: 12px; color: #9c7280;">April 2024</span>
                 </span>
 
                 <span class="background-text" style="display: block; padding-top: 8px;">
                     Phillips Medal<br>
-                    <span style="font-size: x-small; color: #7878a8;">February 2020</span>
+                    <span style="font-size: 12px; color: #9c7280;">February 2020</span>
                 </span>
 
                 <span class="background-text" style="display: block; padding-top: 8px;">
                     American Chemical Society Undergraduate Award in Organic Chemistry<br>
-                    <span style="font-size: x-small; color: #7878a8;">October 2019</span>
+                    <span style="font-size: 12px; color: #9c7280;">October 2019</span>
                 </span>
 
                 <!-- skills -->
-                <span class="background-text" style="display: block; border-top: 1px solid #d4c9bf; padding-top: 15px; margin-top: 18px;">
+                <span class="background-text" style="display: block; border-top: 1px solid #c9c3bc; padding-top: 15px; margin-top: 18px;">
                     <strong>Skills</strong>
                 </span>
 
@@ -289,18 +269,7 @@
 
         <div class="footer__inner">
             <div class="footer__content">
-                © <span id="date_">  </span> |
-                <a href="" style="font-weight: bold;" target="_blank">
-                    sashachernenkoff.com
-                </a>
-            </div>
-        </div>
-
-        <div class="footer__inner">
-            <div class="footer__content">
-                <span>powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">
-                    Sasha
-                </a></span>
+                © <span id="date_">  </span> | powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">Sasha</a>
             </div>
         </div>
 

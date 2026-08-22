@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Poppins&display=swap" rel="stylesheet">
     
     <title>Sasha Chernenkoff</title>
 
@@ -45,32 +45,13 @@
 
         <nav class="navbar">
 
-            <a href="/"><ul class="home">
-
-                <li><img src="/assets/img/wasd-logo.png" height="60px"></li>
-
-            </ul></a>
+            <a href="/" class="site-name">Sasha Chernenkoff</a>
 
             <ul class="nav-links">
-
-                <li class="dropdown">
-                    cd sasha
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/about/"><li class="dropdown_item-1">about</li></a>
-                        <a href="/cv/"><li class="dropdown_item-2">cv</li></a>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    cd projects
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/research/">
-                            <li class="dropdown_item-1">research</li></a>
-                        <a href="/design/">
-                            <li class="dropdown_item-3">design</li></a>
-                    </ul>
-                </li>
-
+                <li><a href="/intro/" class="active">Introduction</a></li>
+                <li><a href="/cv/">Curriculum Vitae</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
 
         </nav>
@@ -81,19 +62,16 @@
 
         <div class="mobile-drawer">
             <ul class="mobile-drawer-links">
-                <li><a href="/about/">about</a></li>
-                <li><a href="/cv/">cv</a></li>
-                <li><a href="/research/">research</a></li>
-                <li><a href="/design/">design</a></li>
+                <li><a href="/intro/">Introduction</a></li>
+                <li><a href="/cv/">Curriculum Vitae</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
             <div class="mobile-drawer-footer-text">
-                &copy; <span class="footer-year"></span> sashachernenkoff.com<br>
-                powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
+                &copy; <span class="footer-year"></span> | powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
             </div>
         </div>
         <div class="mobile-overlay"></div>
-
-        <style>.home:after { content:'about'; }</style>
 
     </header>
 
@@ -177,7 +155,7 @@
 
             <div class="container-box-text">
 
-                <span class="background-text" style="display: block; background: #44423f; color: white; padding: 4px 12px; width: fit-content; margin-bottom: 18px; font-size: x-small; letter-spacing: 0.04em;">Finishing an M.Sc. in bioinformatics (U of C) - I adapt pretrained genomic foundation models to answer clinical questions</span>
+                <span class="background-text intro-badge" style="display: block; background: #44423f; color: white; padding: 4px 12px; width: fit-content; margin-bottom: 18px; font-size: 12px; letter-spacing: 0.04em;">Finishing an M.Sc. in bioinformatics (U of C) - I adapt pretrained genomic foundation models to answer clinical questions</span>
 
                 <span class="background-text">Hi, my name is Sasha Chernenkoff!</span>
                 <br><br>
@@ -217,22 +195,9 @@
         <div class="footer__inner">
 
             <div class="footer__content">
-                © <span id="date_">  </span> |
-                <a href="" style="font-weight: bold;" target="_blank">
-                    sashachernenkoff.com
-                </a>
+                © <span id="date_">  </span> | powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">Sasha</a>
             </div>
             
-        </div>
-
-        <div class="footer__inner">
-
-            <div class="footer__content">
-                <span>powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">
-                    Sasha
-                </a></span>
-            </div>
-
         </div>
 
     </footer>

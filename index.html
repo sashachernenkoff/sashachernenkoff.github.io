@@ -45,30 +45,13 @@
 
         <nav class="navbar">
 
-            <a href="/"><ul class="home">
-
-                <li><img src="/assets/img/wasd-logo.png" height="60px"></li>
-
-            </ul></a>
+            <a href="/" class="site-name">Sasha Chernenkoff</a>
 
             <ul class="nav-links">
-
-                <li class="dropdown">
-                    cd sasha
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/about/"><li class="dropdown_item-1">about</li></a>
-                        <a href="/cv/"><li class="dropdown_item-2">cv</li></a>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    cd projects
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/research/"><li class="dropdown_item-1">research</li></a>
-                        <a href="/design/"><li class="dropdown_item-3">design</li></a>
-                    </ul>
-                </li>
-
+                <li><a href="/intro/">Introduction</a></li>
+                <li><a href="/cv/">Curriculum Vitae</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
 
         </nav>
@@ -79,19 +62,16 @@
 
         <div class="mobile-drawer">
             <ul class="mobile-drawer-links">
-                <li><a href="/about/">about</a></li>
-                <li><a href="/cv/">cv</a></li>
-                <li><a href="/research/">research</a></li>
-                <li><a href="/design/">design</a></li>
+                <li><a href="/intro/">Introduction</a></li>
+                <li><a href="/cv/">Curriculum Vitae</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
             <div class="mobile-drawer-footer-text">
-                &copy; <span class="footer-year"></span> sashachernenkoff.com<br>
-                powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
+                &copy; <span class="footer-year"></span> | powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
             </div>
         </div>
         <div class="mobile-overlay"></div>
-
-        <style>.home:after { visibility:hidden; }</style>
 
     </header>
 
@@ -99,6 +79,30 @@
     <div class="wrapper">
 
         <div class="container-box-home">
+
+                <div class="terminal-titlebar">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                    <span class="terminal-title">sasha@genomics — -zsh</span>
+                </div>
+
+                <pre class="terminal-transcript" aria-hidden="true">sasha@genomics ~ % bwa mem -t 8 ref.fa sample_R1.fq.gz sample_R2.fq.gz \
+    | samtools sort -@ 8 -o aligned.bam -
+[main] Real time: 512.334 sec; CPU: 3892.011 sec
+sasha@genomics ~ % gatk MarkDuplicates -I aligned.bam -O dedup.bam -M metrics.txt
+INFO  MarkDuplicates - Marking 1,204,338 duplicate reads
+sasha@genomics ~ % gatk BaseRecalibrator -I dedup.bam -R ref.fa \
+    --known-sites dbsnp.vcf.gz -O recal.table
+INFO  ProgressMeter - Traversal complete. Processed 24,192 regions.
+sasha@genomics ~ % gatk ApplyBQSR -I dedup.bam -R ref.fa \
+    --bqsr-recal-file recal.table -O recal.bam
+sasha@genomics ~ % gatk HaplotypeCaller -R ref.fa -I recal.bam \
+    -O sample.g.vcf.gz -ERC GVCF
+INFO  HaplotypeCaller - Emitting reference-confidence GVCF records
+INFO  ProgressMeter -        chr1:248,912,033   99.8%    3.2 m
+INFO  HaplotypeCaller - Total variants called: 4,812,337
+sasha@genomics ~ % </pre>
 
                 <span class="biopic">
                     <img class="biopic-image" src="assets/img/biopic.png" height="100" alt="Sasha Chernenkoff">
@@ -170,22 +174,9 @@
         <div class="footer__inner">
 
             <div class="footer__content">
-                © <span id="date_">  </span> |
-                <a href="" style="font-weight: bold;" target="_blank">
-                    sashachernenkoff.com
-                </a>
+                © <span id="date_">  </span> | powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">Sasha</a>
             </div>
             
-        </div>
-
-        <div class="footer__inner">
-
-            <div class="footer__content">
-                <span>powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">
-                    Sasha
-                </a></span>
-            </div>
-
         </div>
 
     </footer>

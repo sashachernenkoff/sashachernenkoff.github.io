@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Poppins&display=swap" rel="stylesheet">
 
     <title>Sasha Chernenkoff</title>
 
@@ -70,28 +70,13 @@
 
         <nav class="navbar">
 
-            <a href="/"><ul class="home">
-                <li><img src="/assets/img/wasd-logo.png" height="60px"></li>
-            </ul></a>
+            <a href="/" class="site-name">Sasha Chernenkoff</a>
 
             <ul class="nav-links">
-
-                <li class="dropdown">
-                    cd sasha
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/about/"><li class="dropdown_item-1">about</li></a>
-                        <a href="/cv/"><li class="dropdown_item-2">cv</li></a>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    cd projects
-                    <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-                        <a href="/research/"><li class="dropdown_item-1">research</li></a>
-                        <a href="/design/"><li class="dropdown_item-3">design</li></a>
-                    </ul>
-                </li>
-
+                <li><a href="/intro/">Introduction</a></li>
+                <li><a href="/cv/">Curriculum Vitae</a></li>
+                <li><a href="/research/" class="active">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
 
         </nav>
@@ -102,20 +87,18 @@
 
         <div class="mobile-drawer">
             <ul class="mobile-drawer-links">
-                <li><a href="/about/">about</a></li>
-                <li><a href="/cv/">cv</a></li>
-                <li><a href="/research/">research</a></li>
-                <li><a href="/design/">design</a></li>
+                <li><a href="/intro/">Introduction</a></li>
+                <li><a href="/cv/">Curriculum Vitae</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/design/">Design</a></li>
             </ul>
             <div class="mobile-drawer-footer-text">
-                &copy; <span class="footer-year"></span> sashachernenkoff.com<br>
-                powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
+                &copy; <span class="footer-year"></span> | powered by <a href="https://github.com/sashachernenkoff" target="_blank">Sasha</a>
             </div>
         </div>
         <div class="mobile-overlay"></div>
 
         <style>
-            .home:after { content:'research'; }
             #wrapper-scroll { width: 600vw; }
             @media (max-width: 900px) {
                 #wrapper-scroll { height: 600vh; width: 100vw; }
@@ -136,7 +119,7 @@
                     <div class="container-box-text-scroll">
                         <span class="background-text"><span class="slide-title">Fine-tuning genomic foundation models for protein abundance prediction</span>
                             <span class="slide-subtitle">University of Calgary MSc Thesis Project</span>
-                            <br><br>
+                            <br>
                             Protein abundance is shaped by a complex interaction between transcription,
                             post-transcriptional control, translation efficiency, and post-translational control.
                             These factors are difficult to learn from limited labeled data, since mRNA levels
@@ -168,7 +151,7 @@
                     <div class="container-box-text-scroll">
                         <span class="background-text"><span class="slide-title">Diploid, patient-specific gene expression modelling</span>
                             <span class="slide-subtitle">University of Calgary Research Project</span>
-                            <br><br>
+                            <br>
                             Most genomic sequence-to-function models operate on haploid reference sequences. This
                             makes them poor predictors of real patient regulatory variation. They fail to capture
                             cis-epistasis: the non-additive compounding effect of multiple regulatory variants
@@ -181,6 +164,7 @@
                             <br><br>
                             <span class="tag-list">
                                 <span class="tag">Genomic Foundation Models</span>
+                                <span class="tag">Transfer Learning</span>
                                 <span class="tag">Diploid Modelling</span>
                                 <span class="tag">Personalized Genomics</span>
                                 <span class="tag">Gene Expression Prediction</span>
@@ -198,9 +182,9 @@
                 <div class="container-box-scroll three" id="three">
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text"><span class="slide-title">VAE-Based Heritability Estimation from Genotype Data</span>
+                        <span class="background-text"><span class="slide-title">VAE-based heritability estimation from genotype data</span>
                             <span class="slide-subtitle">University of Calgary Research Project</span>
-                            <br><br>
+                            <br>
                             Standard heritability estimation methods, such as GCTA-GREML, rely on genetic
                             relationship matrices (GRMs) built directly from genotype data or from linear
                             dimensionality-reduction techniques like PCA, which may not fully capture nonlinear
@@ -247,7 +231,7 @@
                     <div class="container-box-lb-text">
                         <span class="background-text"><span class="slide-title">MPS I &amp; II</span>
                             <span class="slide-subtitle">PerkinElmer Genomics</span>
-                            <br><br>
+                            <br>
                             At PerkinElmer Genomics, I developed semi-quantitative assays to detect the
                             presence of analytes (found to only be present in individuals with MPS I &amp; II)
                             from dried blood spots using LC-MS/MS, which can be run simultaneously as a panel.
@@ -267,6 +251,7 @@
                                 <span class="tag">LC-MS/MS</span>
                                 <span class="tag">Biomarker Discovery</span>
                                 <span class="tag">Lysosomal Storage Disorders</span>
+                                <span class="tag">Assay Development</span>
                             </span>
                         </span>
                     </div>
@@ -291,7 +276,7 @@
                     <div class="container-box-text-scroll">
                         <span class="background-text"><span class="slide-title">Pompe CRIM-status determination</span>
                             <span class="slide-subtitle">PerkinElmer Genomics</span>
-                            <br><br>
+                            <br>
                             At PerkinElmer Genomics, I developed a qualitative assay to detect the presence of
                             endogenous acid α-glucosidase (GAA) within human peripheral blood mononuclear cells
                             (PBMCs) isolated from whole blood using Western blotting. The assay allows for rapid
@@ -299,8 +284,8 @@
                             initiate immune tolerance induction.
                             <br><br>
                             <span class="tag-list">
+                                <span class="tag">Newborn Screening</span>
                                 <span class="tag">Western Blotting</span>
-                                <span class="tag">CRIM Status</span>
                                 <span class="tag">Pompe Disease</span>
                                 <span class="tag">Assay Development</span>
                             </span>
@@ -333,7 +318,7 @@
                     <div class="container-box-text-scroll">
                         <span class="background-text"><span class="slide-title">KDM6B 'bump-and-hole' research</span>
                             <span class="slide-subtitle">University of Pittsburgh Undergraduate Research</span>
-                            <br><br>
+                            <br>
                             As an undergraduate at the University of Pittsburgh, I utilized the 'bump-and-hole'
                             method to develop variants of KDM6B with 'hole-modified' active sites which were
                             sensitive to selective inhibition by α-ketoglutarate engineered with complementary
@@ -360,18 +345,7 @@
 
         <div class="footer__inner">
             <div class="footer__content">
-                © <span id="date_">  </span> |
-                <a href="" style="font-weight: bold;" target="_blank">
-                    sashachernenkoff.com
-                </a>
-            </div>
-        </div>
-
-        <div class="footer__inner">
-            <div class="footer__content">
-                <span>powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">
-                    Sasha
-                </a></span>
+                © <span id="date_">  </span> | powered by <a href="https://github.com/sashachernenkoff" style="font-weight: bold;" target="_blank">Sasha</a>
             </div>
         </div>
 
