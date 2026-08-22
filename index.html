@@ -45,7 +45,7 @@
 
         <nav class="navbar">
 
-            <a href="/" class="site-name">Sasha Chernenkoff</a>
+            <a href="/" class="site-name active">Sasha Chernenkoff</a>
 
             <ul class="nav-links">
                 <li><a href="/intro/">Introduction</a></li>
@@ -87,43 +87,17 @@
                     <span class="terminal-title">sasha@genomics — -zsh</span>
                 </div>
 
-                <pre class="terminal-transcript" aria-hidden="true">sasha@genomics ~ % bwa mem -t 8 ref.fa sample_R1.fq.gz sample_R2.fq.gz \
-    | samtools sort -@ 8 -o aligned.bam -
-[main] Real time: 512.334 sec; CPU: 3892.011 sec
-sasha@genomics ~ % gatk MarkDuplicates -I aligned.bam -O dedup.bam -M metrics.txt
-INFO  MarkDuplicates - Marking 1,204,338 duplicate reads
-sasha@genomics ~ % gatk BaseRecalibrator -I dedup.bam -R ref.fa \
-    --known-sites dbsnp.vcf.gz -O recal.table
-INFO  ProgressMeter - Traversal complete. Processed 24,192 regions.
-sasha@genomics ~ % gatk ApplyBQSR -I dedup.bam -R ref.fa \
-    --bqsr-recal-file recal.table -O recal.bam
-sasha@genomics ~ % gatk HaplotypeCaller -R ref.fa -I recal.bam \
-    -O sample.g.vcf.gz -ERC GVCF
-INFO  HaplotypeCaller - Emitting reference-confidence GVCF records
-INFO  ProgressMeter -        chr1:248,912,033   99.8%    3.2 m
-INFO  HaplotypeCaller - Total variants called: 4,812,337
-sasha@genomics ~ % </pre>
+                <div class="terminal-body">
 
-                <span class="biopic">
-                    <img class="biopic-image" src="assets/img/biopic.png" height="100" alt="Sasha Chernenkoff">
-                </span>
+                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % whoami</div>
 
-                <br><br>
+                    <div class="term-card">
 
-                <span class="hello-myname">
-                    <span class="hi-this-is" style="font-size: 16px!important;">Hi, this is</span>
-                    <h1 class="name" style="display: inline; font-size: 26px!important;"> Sasha Chernenkoff</h1>
-                </span>
+                        <img class="term-portrait" src="assets/img/biopic.png" alt="Sasha Chernenkoff">
 
-            <article>
-
-                <br>
-
-                <span class="current-title">
-                    Bioinformatics | Machine Learning | Design <span id="typing-effect">|</span>
-                </span>
-
-                <br><br>
+                        <div class="term-card-text">
+                            <div class="term-welcome">Hi, this is <span class="term-name">Sasha Chernenkoff</span></div>
+                            <div class="term-tagline">Bioinformatics | Machine Learning | Design</div>
 
                 <ul id="social-icons">
                     <li title="linkedin">
@@ -162,8 +136,29 @@ sasha@genomics ~ % </pre>
                         </a>
                     </li>
                 </ul>
+                        </div>
 
-            </article>
+                    </div>
+
+                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % bwa mem -t 8 ref.fa sample_R1.fq.gz sample_R2.fq.gz \</div>
+                    <div class="term-out">    | samtools sort -@ 8 -o aligned.bam -</div>
+                    <div class="term-out">[main] Real time: 512.334 sec; CPU: 3892.011 sec</div>
+                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk MarkDuplicates -I aligned.bam -O dedup.bam -M metrics.txt</div>
+                    <div class="term-out">INFO  MarkDuplicates - Marking 1,204,338 duplicate reads</div>
+                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk BaseRecalibrator -I dedup.bam -R ref.fa \</div>
+                    <div class="term-out">    --known-sites dbsnp.vcf.gz -O recal.table</div>
+                    <div class="term-out">INFO  ProgressMeter - Traversal complete. Processed 24,192 regions.</div>
+                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk ApplyBQSR -I dedup.bam -R ref.fa \</div>
+                    <div class="term-out">    --bqsr-recal-file recal.table -O recal.bam</div>
+                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk HaplotypeCaller -R ref.fa -I recal.bam \</div>
+                    <div class="term-out">    -O sample.g.vcf.gz -ERC GVCF</div>
+                    <div class="term-out">INFO  HaplotypeCaller - Emitting reference-confidence GVCF records</div>
+                    <div class="term-out">INFO  ProgressMeter -        chr1:248,912,033   99.8%    3.2 m</div>
+                    <div class="term-out">INFO  HaplotypeCaller - Total variants called: 4,812,337</div>
+
+                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % <span class="term-cursor"></span></div>
+
+                </div>
 
         </div>
 
@@ -188,7 +183,7 @@ sasha@genomics ~ % </pre>
         crossorigin="anonymous"></script>
     <script src="inc/bootstrap5/js/bootstrap.min.js"></script>
     <script src="inc/fontawesome5/js/all.min.js"></script>
-    <script src="assets/js/resize.js"></script>
+    <script src="assets/js/resize.js?v=3"></script>
     <script src="assets/js/drawer.js"></script>
 
 </body>

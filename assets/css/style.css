@@ -81,9 +81,14 @@ a:hover {
   text-decoration: none;
   white-space: nowrap;
 }
-.site-name:visited,
-.site-name:hover {
+.site-name.active {
+  font-weight: 400;
+}
+.site-name:visited {
   color: #44423f;
+}
+.site-name:hover {
+  color: #a8506e;
 }
 .nav-links {
   display: flex;
@@ -140,8 +145,8 @@ a:hover {
   border-radius: 10px;
   transition: width 1s;
   margin: 0 auto 40px;
-  padding: 38px 30px 30px;
-  text-align: center;
+  padding: 0;
+  text-align: left;
   position: relative;
   overflow: hidden;
 }
@@ -219,6 +224,70 @@ a:hover {
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
+/* home terminal: portrait + welcome + tagline + links as terminal output */
+.terminal-body {
+  position: relative;
+  z-index: 1;
+  padding: 44px 22px 20px;
+  text-align: left;
+  font-family: var(--term-mono);
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--term-dim);
+}
+.term-out {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.term-prompt {
+  color: var(--term-accent);
+}
+.term-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 14px 2px;
+}
+.term-portrait {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+}
+.term-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.term-welcome {
+  font-family: 'GT Walsheim Pro', 'Poppins', Verdana, sans-serif;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.2;
+}
+.term-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+.term-tagline {
+  font-family: 'GT Walsheim Pro', 'Poppins', Verdana, sans-serif;
+  color: #fff;
+  font-size: 12.5px;
+}
+.term-card-text #social-icons {
+  margin: 3px 0 0 -5px;
+  min-width: 0;
+}
+.term-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  vertical-align: text-bottom;
+  background: var(--term-accent-2);
+  animation: termCursor 1.1s steps(1) infinite;
+}
 .biopic {
   /* padding: 30px; */
 }
@@ -275,6 +344,9 @@ a:hover {
 }
 .container-box-home #social-icons .iconi {
   color: var(--term-text)!important;
+}
+.container-box-home #social-icons .iconi:hover {
+  color: var(--term-accent-2)!important;
 }
 .container-box-image #social-icons {
   margin-top: 20px;
@@ -581,7 +653,7 @@ a:hover {
   margin: 20px 0;
   cursor: zoom-in;
 }
-.lb-image-3, .lb-image-4, .lb-image-5 {
+.lb-image-3, .lb-image-4, .lb-image-5, .lb-image-6 {
   box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.28);
   background-color: #fff;
   width: 100%;
@@ -882,8 +954,12 @@ a:hover {
     padding: 18px 30px;
     color: #c9c3bc;
     text-decoration: none;
-    font-size: small;
+    font-size: 16px;
+    font-weight: 100;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-drawer-links li a:hover {
+    color: #fff;
   }
   .mobile-drawer-links li a:active {
     background-color: rgba(255,255,255,0.08);
@@ -891,7 +967,7 @@ a:hover {
   }
   .mobile-drawer-footer-text {
     padding: 20px 30px calc(20px + env(safe-area-inset-bottom, 20px));
-    font-size: xx-small;
+    font-size: small;
     color: rgba(255,255,255,0.3);
     border-top: 1px solid rgba(255,255,255,0.1);
   }
@@ -1051,7 +1127,7 @@ a:hover {
     max-height: fit-content;
     padding: 10px;
   }
-  .lb-image-1, .lb-image-2, .lb-image-3, .lb-image-4, .lb-image-5 {
+  .lb-image-1, .lb-image-2, .lb-image-3, .lb-image-4, .lb-image-5, .lb-image-6 {
     max-width: 300px;
     height: 240px;
     margin: 10px 0;
