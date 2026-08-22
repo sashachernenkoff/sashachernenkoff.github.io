@@ -640,7 +640,7 @@ a:hover {
   max-width: 500px;
   height: 400px;
   margin: 20px 0;
-  cursor: zoom-in;
+  cursor: pointer; cursor: zoom-in;
 }
 .lb-image-2 {
   box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.28);
@@ -651,7 +651,7 @@ a:hover {
   max-width: 500px;
   height: 400px;
   margin: 20px 0;
-  cursor: zoom-in;
+  cursor: pointer; cursor: zoom-in;
 }
 .lb-image-3, .lb-image-4, .lb-image-5, .lb-image-6 {
   box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.28);
@@ -662,7 +662,7 @@ a:hover {
   max-width: 500px;
   height: 400px;
   margin: 20px 0;
-  cursor: zoom-in;
+  cursor: pointer; cursor: zoom-in;
 }
 .lb-thumbnail-wrapper {
   width: 100%;
@@ -730,7 +730,7 @@ a:hover {
   height: 100%;
   object-fit: contain;
   object-position: center center;
-  cursor: zoom-out;
+  cursor: pointer; cursor: zoom-out;
 }
 .modal-content, #caption { 
   animation-name: zoom;
@@ -852,6 +852,52 @@ a:hover {
 }
 
 /* mobile settings */
+
+/* below full desktop (901-1300px): about/cv stay two-column; slides go small-images-on-top */
+@media (min-width: 901px) and (max-width: 1300px) {
+  /* about / cv: keep the two columns from overflowing */
+  .container-box {
+    width: 88%;
+    flex-wrap: wrap;
+  }
+  .container-box-text {
+    flex: 1 1 320px;
+  }
+  .container-box-image {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* research / design slides: small images stacked above the text (same as mobile) */
+  .container-box-scroll,
+  .container-box-lb {
+    width: 82%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: fit-content;
+  }
+  .container-box-lb-image:has(.lb-thumbnail-wrapper) .lb-image-container {
+    display: none;
+  }
+  .lb-image-1, .lb-image-2, .lb-image-3, .lb-image-4, .lb-image-5, .lb-image-6 {
+    max-width: 150px;
+    height: auto;
+    margin: 10px 0;
+  }
+  .lb-thumbnail-1, .lb-thumbnail-2, .lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5 {
+    max-width: 110px;
+    height: 82px;
+    object-fit: cover;
+    cursor: pointer; cursor: zoom-in;
+    border: 0 !important;
+  }
+  .container-box-lb-image,
+  .container-box-text-scroll,
+  .container-box-lb-text {
+    flex-basis: 100%;
+  }
+}
+
 
 @media  (max-width:900px) {
 
@@ -1103,6 +1149,12 @@ a:hover {
   .container-box-text-scroll {
     padding: 5px 20px;
   }
+  /* small-image breakpoint: stack the images on top of the text on every slide */
+  .container-box-lb-image,
+  .container-box-text-scroll,
+  .container-box-lb-text {
+    flex-basis: 100%;
+  }
   .container-box-image-scroll {
     width: 100%;
     display: flex;
@@ -1127,18 +1179,38 @@ a:hover {
     max-height: fit-content;
     padding: 10px;
   }
+  /* multi-image slides: drop the big main image; the thumbnail row is the carousel */
+  .container-box-lb-image:has(.lb-thumbnail-wrapper) .lb-image-container {
+    display: none;
+  }
+  /* lone images render small (tap opens full screen) */
   .lb-image-1, .lb-image-2, .lb-image-3, .lb-image-4, .lb-image-5, .lb-image-6 {
-    max-width: 300px;
-    height: 240px;
+    max-width: 150px;
+    height: auto;
     margin: 10px 0;
   }
-  .lb-thumbnail-1, lb-thumbnail-2, .lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5 {
-    max-width: 60px;
-    height: 48px;
+  .lb-thumbnail-1, .lb-thumbnail-2, .lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5 {
+    max-width: 110px;
+    height: 82px;
+    object-fit: cover;
+    cursor: pointer; cursor: zoom-in;
+    border: 0 !important;
+  }
+  .lb-thumbnail-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
   .container-box-lb-text {
     margin-top: 20px;
     padding: 5px 10px;
+  }
+  .tag-list {
+    gap: 6px;
+  }
+  .tag {
+    padding: 3px 9px;
   }
 
 
@@ -1178,5 +1250,14 @@ a:hover {
   }
   .fab {
     color: #44423f!important;
+  }
+}
+
+/* Safari does not render the zoom-in/zoom-out cursor; use the pointer there */
+@supports (background: -webkit-named-image(i)) {
+  .lb-image-1, .lb-image-2, .lb-image-3, .lb-image-4, .lb-image-5, .lb-image-6,
+  .lb-thumbnail-1, .lb-thumbnail-2, .lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5,
+  .modal-content {
+    cursor: pointer;
   }
 }

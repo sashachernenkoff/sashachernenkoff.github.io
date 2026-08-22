@@ -1,5 +1,8 @@
 function setMain1(thumbnailImage) {
 
+    // on mobile there is no main image box: tap opens the full-screen view
+    if (window.innerWidth <= 1300) { openModal(thumbnailImage); return; }
+
     // change the main image to the thumbnail that was clicked
     var mainImage = document.getElementById("imageBox-1");
     mainImage.src = thumbnailImage.src;
@@ -17,6 +20,9 @@ function setMain1(thumbnailImage) {
 }
 
 function setMain2(thumbnailImage) {
+
+    // on mobile there is no main image box: tap opens the full-screen view
+    if (window.innerWidth <= 1300) { openModal(thumbnailImage); return; }
 
     // change the main image to the thumbnail that was clicked
     var mainImage = document.getElementById("imageBox-2");
@@ -36,6 +42,9 @@ function setMain2(thumbnailImage) {
 
 function setMain3(thumbnailImage) {
 
+    // on mobile there is no main image box: tap opens the full-screen view
+    if (window.innerWidth <= 1300) { openModal(thumbnailImage); return; }
+
     // change the main image to the thumbnail that was clicked
     var mainImage = document.getElementById("imageBox-3");
     mainImage.src = thumbnailImage.src;
@@ -53,6 +62,9 @@ function setMain3(thumbnailImage) {
 }
 
 function setMain5(thumbnailImage) {
+
+    // on mobile there is no main image box: tap opens the full-screen view
+    if (window.innerWidth <= 1300) { openModal(thumbnailImage); return; }
 
     // change the main image to the thumbnail that was clicked
     var mainImage = document.getElementById("imageBox-5");
