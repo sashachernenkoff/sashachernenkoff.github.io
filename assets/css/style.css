@@ -669,7 +669,9 @@ a:hover {
   max-width: 500px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .lb-thumbnail-1 {
   box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.28);
@@ -886,8 +888,7 @@ a:hover {
   }
   .lb-thumbnail-1, .lb-thumbnail-2, .lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5 {
     max-width: 110px;
-    height: 82px;
-    object-fit: cover;
+    height: auto;
     cursor: pointer; cursor: zoom-in;
     border: 0 !important;
   }
@@ -1191,8 +1192,7 @@ a:hover {
   }
   .lb-thumbnail-1, .lb-thumbnail-2, .lb-thumbnail-3, .lb-thumbnail-4, .lb-thumbnail-5 {
     max-width: 110px;
-    height: 82px;
-    object-fit: cover;
+    height: auto;
     cursor: pointer; cursor: zoom-in;
     border: 0 !important;
   }
