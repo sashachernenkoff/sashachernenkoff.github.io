@@ -978,17 +978,33 @@ a:hover {
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: calc(-70% - 25px);
-    width: 70%;
+    left: calc(-60% - 25px);
+    width: 60%;
     height: 100vh;
     height: 100dvh;
     background-color: #333333;
     z-index: 10000;
-    transition: left 0.3s ease;
+    transition: left 0.65s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: 4px 0 20px rgba(0,0,0,0.35);
   }
   .mobile-drawer.open {
     left: 0;
+  }
+  /* menu items roll in, staggered, as the drawer opens */
+  .mobile-drawer-links li {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .mobile-drawer.open .mobile-drawer-links li {
+    animation: drawerRollIn 0.6s cubic-bezier(0.25, 1, 0.4, 1) both;
+  }
+  .mobile-drawer.open .mobile-drawer-links li:nth-child(1) { animation-delay: 0.22s; }
+  .mobile-drawer.open .mobile-drawer-links li:nth-child(2) { animation-delay: 0.34s; }
+  .mobile-drawer.open .mobile-drawer-links li:nth-child(3) { animation-delay: 0.46s; }
+  .mobile-drawer.open .mobile-drawer-links li:nth-child(4) { animation-delay: 0.58s; }
+  @keyframes drawerRollIn {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
   }
   .mobile-drawer-links {
     list-style: none;
