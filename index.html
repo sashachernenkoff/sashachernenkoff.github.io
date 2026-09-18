@@ -84,12 +84,12 @@
                     <span class="terminal-btn red"></span>
                     <span class="terminal-btn yellow"></span>
                     <span class="terminal-btn green"></span>
-                    <span class="terminal-title">sasha@genomics — -zsh</span>
+                    <span class="terminal-title">sasha@torchlab — -zsh</span>
                 </div>
 
                 <div class="terminal-body">
 
-                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % whoami</div>
+                    <div class="term-out"><span class="term-prompt">sasha@torchlab</span> ~ % whoami</div>
 
                     <div class="term-card">
 
@@ -140,23 +140,33 @@
 
                     </div>
 
-                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % bwa mem -t 8 ref.fa sample_R1.fq.gz sample_R2.fq.gz \</div>
-                    <div class="term-out">    | samtools sort -@ 8 -o aligned.bam -</div>
-                    <div class="term-out">[main] Real time: 512.334 sec; CPU: 3892.011 sec</div>
-                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk MarkDuplicates -I aligned.bam -O dedup.bam -M metrics.txt</div>
-                    <div class="term-out">INFO  MarkDuplicates - Marking 1,204,338 duplicate reads</div>
-                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk BaseRecalibrator -I dedup.bam -R ref.fa \</div>
-                    <div class="term-out">    --known-sites dbsnp.vcf.gz -O recal.table</div>
-                    <div class="term-out">INFO  ProgressMeter - Traversal complete. Processed 24,192 regions.</div>
-                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk ApplyBQSR -I dedup.bam -R ref.fa \</div>
-                    <div class="term-out">    --bqsr-recal-file recal.table -O recal.bam</div>
-                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % gatk HaplotypeCaller -R ref.fa -I recal.bam \</div>
-                    <div class="term-out">    -O sample.g.vcf.gz -ERC GVCF</div>
-                    <div class="term-out">INFO  HaplotypeCaller - Emitting reference-confidence GVCF records</div>
-                    <div class="term-out">INFO  ProgressMeter -        chr1:248,912,033   99.8%    3.2 m</div>
-                    <div class="term-out">INFO  HaplotypeCaller - Total variants called: 4,812,337</div>
+                    <div class="term-out"><span class="term-prompt">sasha@torchlab</span> ~ % python build_sequences_bed.py --genome hg38.fa --window 262144</div>
+                    <div class="term-out">Tiling hg38 into fixed 262,144 bp windows...</div>
+                    <div class="term-out">Wrote 41,623 windows -&gt; sequences.bed</div>
+                    <div class="term-out"><span class="term-prompt">sasha@torchlab</span> ~ % python dataset.py --patients manifest.tsv --vcf cohort.clean.vcf.gz</div>
+                    <div class="term-out">Building pseudo-diploid seq1/seq2 from germline SNPs...</div>
+                    <div class="term-out">Split -&gt; chr6/7 test | chr8/9 val | remaining train (825/110/110)</div>
+                    <div class="term-out">Wrote 12 HDF5 shards -&gt; petl_dataset.h5</div>
+                    <div class="term-out"><span class="term-prompt">sasha@torchlab</span> ~ % sbatch train_petl.slurm</div>
+                    <div class="term-out">Submitted batch job 66841506</div>
+                    <div class="term-out"><span class="term-prompt">sasha@torchlab</span> ~ % cat logs/train_66841506.out</div>
+                    <div class="term-out">PETL 2-GPU LoRA training run</div>
+                    <div class="term-out">--- Environment ---</div>
+                    <div class="term-out">Python: /home/scher/envs/petl-torch/bin/python</div>
+                    <div class="term-out">PyTorch 2.9.1, CUDA available: True, GPUs: 2</div>
+                    <div class="term-out">Node: rlf9403</div>
+                    <div class="term-out">NVIDIA A100-SXM4-40GB, 40960 MiB</div>
+                    <div class="term-out">NVIDIA A100-SXM4-40GB, 40960 MiB</div>
+                    <div class="term-out">-------------------</div>
+                    <div class="term-out">Optimizer (residual head): base lr=1e-05 (3,842), delta lr=0.0003 (3,842), no-decay (1), LoRA lr=0.0001 (655,360)</div>
+                    <div class="term-out">[epoch  0] train=0.812  val=0.774  patient_r=0.583  gene_r=0.412  pearson=0.612</div>
+                    <div class="term-out">[epoch  1] train=0.501  val=0.489  patient_r=0.617  gene_r=0.548  pearson=0.701</div>
+                    <div class="term-out">   ...</div>
+                    <div class="term-out">[epoch 39] train=0.198  val=0.213  patient_r=0.669  gene_r=0.706  pearson=0.834</div>
+                    <div class="term-out">Best checkpoint saved: petl_best.pt</div>
+                    <div class="term-out">Duration: 8h 10m. Trainer exit code: 0.</div>
 
-                    <div class="term-out"><span class="term-prompt">sasha@genomics</span> ~ % <span class="term-cursor"></span></div>
+                    <div class="term-out"><span class="term-prompt">sasha@torchlab</span> ~ % <span class="term-cursor"></span></div>
 
                 </div>
 
