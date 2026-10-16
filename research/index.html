@@ -22,19 +22,19 @@
 
 <meta property="og:site_name" content="Sasha Chernenkoff"/>
 <meta property="og:title" content="Sasha Chernenkoff"/>
-<meta property="og:url" content=""/>
+<meta property="og:url" content="https://sashachernenkoff.com/research/"/>
 <meta property="og:type" content="website"/>
-<meta property="og:description" content="Bioinformatics research - genomic foundation models, gene expression, newborn screening"/>
+<meta property="og:description" content="Research in transfer learning and representation learning for genomics: protein abundance prediction, personalized gene expression, heritability estimation and newborn screening."/>
 <meta itemprop="name" content="Sasha Chernenkoff"/>
-<meta itemprop="url" content=""/>
-<meta itemprop="description" content="Sasha Chernenkoff's research"/>
+<meta itemprop="url" content="https://sashachernenkoff.com/research/"/>
+<meta itemprop="description" content="Research in transfer learning and representation learning for genomics: protein abundance prediction, personalized gene expression, heritability estimation and newborn screening."/>
 <meta name="twitter:title" content="Sasha Chernenkoff"/>
-<meta name="twitter:url" content=""/>
+<meta name="twitter:url" content="https://sashachernenkoff.com/research/"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="Sasha Chernenkoff - bioinformatics research"/>
-<meta name="Description" content="Bioinformatics research - genomic foundation models">
+<meta name="twitter:description" content="Research in transfer learning and representation learning for genomics: protein abundance prediction, personalized gene expression, heritability estimation and newborn screening."/>
+<meta name="Description" content="Research in transfer learning and representation learning for genomics: protein abundance prediction, personalized gene expression, heritability estimation and newborn screening.">
 <meta name="author" content="Sasha Chernenkoff">
-<meta name="keywords" content="Sasha Chernenkoff, bioinformatics, genomics, machine learning, foundation models">
+<meta name="keywords" content="Sasha Chernenkoff, machine learning scientist, transfer learning, representation learning, genomics, bioinformatics">
 
 </head>
 
@@ -125,18 +125,19 @@
                     </div>
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text"><span class="slide-title">Fine-tuning genomic foundation models for protein abundance prediction</span>
+                        <span class="background-text"><span class="slide-title">PASTL: Fine-tuning genomic foundation models for protein abundance prediction</span>
                             <span class="slide-subtitle">University of Calgary MSc Thesis Project</span>
                             <br>
-                            Protein abundance is shaped by a complex interaction between transcription,
-                            post-transcriptional control, translation efficiency, and post-translational control.
-                            These factors are difficult to learn from limited labeled data, since mRNA levels
-                            alone are a weak proxy for protein output. This project fine-tunes a pretrained genomic
-                            foundation model trained on large-scale regulatory genomics data as a foundation
-                            for protein abundance prediction. Rather than training from scratch, it leverages
-                            learned representations of DNA regulatory context to test whether
-                            pretrained sequence-to-function models can generalize beyond their original
-                            training tasks to a distinct molecular phenotype.
+                            Protein abundance is shaped by transcription, post-transcriptional control,
+                            translation efficiency and post-translational control. mRNA levels alone are a weak
+                            proxy for protein output, and protein labels are too sparse to train a sequence model
+                            from scratch. This project fine-tunes a genomic foundation model pretrained on
+                            transcriptional readouts to predict protein abundance directly from DNA sequence.
+                            It then uses in silico mutagenesis to study how retargeting the model changes the
+                            sequence features it responds to. The model's variant scores are also tested as a
+                            functional prior for proteome-wide association.
+                            <br><br>
+                            Code: <a href="https://github.com/sashachernenkoff/pastl" target="_blank">github.com/sashachernenkoff/pastl</a>
                             <br><br>
                             <span class="tag-list">
                                 <span class="tag">Representation Learning</span>
@@ -173,9 +174,9 @@
                             makes them poor predictors of real patient regulatory variation. They fail to capture
                             cis-epistasis: the non-additive compounding effect of multiple regulatory variants
                             interacting on the same haplotype. This is a limitation for models intended for clinical use.
-                            This projects uses diploid, patient-specific genome sequences to predict personalized
-                            gene expression coverage. It finetunes the trunk of a genomic foundation model and trains
-                            a new prediction head. The project investigates how much of the model's improvement on
+                            This project uses diploid, patient-specific genome sequences to predict personalized
+                            gene expression coverage. It keeps the trunk of a genomic foundation model frozen, trains
+                            LoRA adapters on its attention layers, and trains a new prediction head. The project investigates how much of the model's improvement on
                             personalized data reflects genuine genotype-driven signal rather than simply learning a
                             new data distribution.
                             <br><br>
@@ -207,19 +208,20 @@
                     </div>
 
                     <div class="container-box-text-scroll">
-                        <span class="background-text"><span class="slide-title">VAE-based heritability estimation from genotype data</span>
+                        <span class="background-text"><span class="slide-title">HERL: VAE-based heritability estimation from genotype data</span>
                             <span class="slide-subtitle">University of Calgary Research Project</span>
                             <br>
-                            Standard heritability estimation methods, such as GCTA-GREML, rely on genetic
-                            relationship matrices (GRMs) built directly from genotype data or from linear
-                            dimensionality-reduction techniques like PCA, which may not fully capture nonlinear
-                            structure in high-dimensional genomic data. This project explores variational
-                            autoencoders (VAEs) as an alternative, nonlinear approach to genotype
-                            dimensionality reduction, learning latent representations of genotype data across
-                            multiple disease and cohort datasets. GRMs constructed from these VAE-derived
-                            latent representations are used to estimate SNP-based heritability via a GREML
-                            framework, with the goal of comparing this deep-learning-based approach against
-                            conventional PCA-based heritability estimation.
+                            Standard heritability estimation methods, such as GCTA-GREML, build genetic
+                            relationship matrices (GRMs) as linear summaries of genotype data. These may not
+                            capture nonlinear structure such as dominance, epistasis or population structure.
+                            This project trains a categorical variational autoencoder (VAE) that compresses
+                            genome-wide genotypes into low-dimensional latent representations. The decoder models
+                            each genotype as one of three states, which lets it represent non-additive effects.
+                            GRMs built from the latent representations are used to estimate SNP heritability with
+                            GREML. They are compared with standard linear GRMs across WTCCC disease cohorts and
+                            GTEx cis-eQTL windows.
+                            <br><br>
+                            Code: <a href="https://github.com/sashachernenkoff/herl" target="_blank">github.com/sashachernenkoff/herl</a>
                             <br><br>
                             <span class="tag-list">
                                 <span class="tag">Representation Learning</span>
@@ -257,17 +259,15 @@
                         <span class="background-text"><span class="slide-title">MPS I &amp; II</span>
                             <span class="slide-subtitle">PerkinElmer Genomics</span>
                             <br>
-                            At PerkinElmer Genomics, I developed semi-quantitative assays to detect the
-                            presence of analytes (found to only be present in individuals with MPS I &amp; II)
-                            from dried blood spots using LC-MS/MS, which can be run simultaneously as a panel.
-                            These markers are virtually undetectable within the normal population, yielding a
-                            larger minimum differential factor and higher confidence in results compared to
-                            traditional tests for MPS. In addition, the tests also allowed for differentiation
-                            of pseudodeficient allele variants from pathogenic variants, reducing the number
-                            of false positives commonly seen in MPS I testing. We then began to investigate
-                            trends between variant types and MPS marker concentrations, specifically for MPS I,
-                            as we believe it could prove clinically useful in understanding variants of unknown
-                            significance, which currently yield ambiguity in predicting clinical status.
+                            At PerkinElmer Genomics, I developed semi-quantitative LC-MS/MS assays that detect
+                            analytes in dried blood spots. These analytes are present only in individuals with
+                            MPS I &amp; II, and the assays run together as a panel. The markers are virtually
+                            undetectable in the normal population. This gives a larger minimum differential factor
+                            and higher confidence in results than traditional MPS tests. The tests also distinguish
+                            pseudodeficient alleles from pathogenic variants, which reduces the false positives
+                            common in MPS I testing. We then began investigating trends between variant type and
+                            marker concentration in MPS I. These trends could help interpret variants of unknown
+                            significance, which currently make clinical status difficult to predict.
                             <br><br>
                             <span class="tag-list">
                                 <span class="tag">Newborn Screening</span>
